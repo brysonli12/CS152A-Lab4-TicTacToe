@@ -88,9 +88,19 @@ end
 assign hsync = (hc < hpulse) ? 0:1;
 assign vsync = (vc < vpulse) ? 0:1;
 
-parameter [9:0] line_thickness = 10;
-wire [9:0] line_x [1:0] = {100, 100};//[31:0]
-wire [9:0] line_y [1:0] = {50,100};
+parameter [9:0] line_thickness = 2;
+parameter [9:0] tile_offset = 10;
+parameter [9:0] tile_width = 50;
+parameter [9:0] radius = 15;
+parameter [9:0] circle_thickness = 2;
+parameter [9:0] o_vec = 9'b010010000;
+reg [50:0] x_arr [50:0];//INDEX {..., 1, 0}. Note that 50 should be equal to tile_width
+reg [50:0] y_arr [50:0];//INDEX {..., 1, 0}. Note that 50 should be equal to tile_width
+
+initial begin
+//	line_x[0] = 100;
+//	line_x[1] = 200;
+end
 // display 100% saturation colorbars
 // ------------------------
 // Combinational "always block", which is a block that is
@@ -104,70 +114,99 @@ begin
 	// first check if we're within vertical active video range
 	if (vc >= vbp && vc < vfp)
 	begin
-		// now display different colors every 80 pixels
-		// while we're within the active horizontal range
-		// -----------------
-		// display white bar
-		if (hc >= (hbp + line_x[0]) && hc < (hbp + 100 + line_thickness))
+		// Tic-Tac-Toe Lines
+		if ( (hc >= (hbp + tile_offset + tile_width) && hc < (hbp + tile_offset + tile_width + line_thickness) 
+					&& vc >= (vbp + tile_offset) && vc < (vbp + tile_offset + 3*tile_width + 2*line_thickness))
+			|| (hc >= (hbp + tile_offset + tile_width*2 + line_thickness) && hc < (hbp + tile_offset + tile_width*2 + line_thickness*2) 
+					&& vc >= (vbp + tile_offset) && vc < (vbp + tile_offset + 3*tile_width + 2*line_thickness))
+			|| (vc >= (vbp + tile_offset + tile_width*2 + line_thickness) && vc < (vbp + tile_offset + tile_width*2 + line_thickness*2) 
+					&& hc >= (hbp + tile_offset) && hc < (hbp + tile_offset + 3*tile_width + 2*line_thickness))
+			|| (vc >= (vbp + tile_offset + tile_width) && vc < (vbp + tile_offset + tile_width + line_thickness) 
+					&& hc >= (hbp + tile_offset) && hc < (hbp + tile_offset + 3*tile_width + 2*line_thickness)))
 		begin
+			red = 3'b010;
+			green = 3'b100;
+			blue = 2'b11;
+		end
+		
+		
+		// Tile Blocks
+		// 0 | 1 | 2
+		// 3 | 4 | 5
+		// 6 | 7 | 8
+		// Begin Row 1
+		else if (   (hc >= (hbp + tile_offset) && hc < (hbp + tile_offset + tile_width))
+					&& (vc >= (vbp + tile_offset) && vc < (vbp + tile_offset + tile_width)))
+		begin // Tile 0
+			
+			red = 3'b111;
+			green = 3'b000;
+			blue = 2'b00;
+			
+		end
+		else if (   (hc >= (hbp + tile_offset + line_thickness + tile_width) && hc < (hbp + tile_offset + tile_width*2 + line_thickness))
+					&& (vc >= (vbp + tile_offset) && vc < (vbp + tile_offset + tile_width)))
+		begin // Tile 1
+			red = 3'b000;
+			green = 3'b111;
+			blue = 2'b00;
+		end
+		else if (   (hc >= (hbp + tile_offset + line_thickness*2 + tile_width*2) && hc < (hbp + tile_offset + tile_width*3 + line_thickness*2))
+					&& (vc >= (vbp + tile_offset) && vc < (vbp + tile_offset + tile_width)))
+		begin // Tile 2
 			red = 3'b000;
 			green = 3'b000;
 			blue = 2'b11;
 		end
-		else if (hc >= hbp && hc < (hbp+80))
-		begin
-			red = 3'b111;
-			green = 3'b111;
-			blue = 2'b11;
-		end
-		// display yellow bar
-		else if (hc >= (hbp+80) && hc < (hbp+160))
-		begin
+		// Begin Row 2
+		else if (   (hc >= (hbp + tile_offset) && hc < (hbp + tile_offset + tile_width))
+					&& (vc >= (vbp + tile_offset + line_thickness + tile_width) && vc < (vbp + tile_offset + tile_width*2 + line_thickness)))
+		begin // Tile 3
 			red = 3'b111;
 			green = 3'b111;
 			blue = 2'b00;
 		end
-		// display cyan bar
-		else if (hc >= (hbp+160) && hc < (hbp+240))
-		begin
-			red = 3'b000;
-			green = 3'b111;
-			blue = 2'b11;
-		end
-		// display green bar
-		else if (hc >= (hbp+240) && hc < (hbp+320))
-		begin
-			red = 3'b000;
-			green = 3'b111;
-			blue = 2'b00;
-		end
-		// display magenta bar
-		else if (hc >= (hbp+320) && hc < (hbp+400))
-		begin
+		else if (   (hc >= (hbp + tile_offset + line_thickness + tile_width) && hc < (hbp + tile_offset + tile_width*2 + line_thickness))
+					&& (vc >= (vbp + tile_offset + line_thickness + tile_width) && vc < (vbp + tile_offset + tile_width*2 + line_thickness)))
+		begin // Tile 4
 			red = 3'b111;
 			green = 3'b000;
 			blue = 2'b11;
 		end
-		// display red bar
-		else if (hc >= (hbp+400) && hc < (hbp+480))
-		begin
-			red = 3'b111;
-			green = 3'b000;
-			blue = 2'b00;
-		end
-		// display blue bar
-		else if (hc >= (hbp+480) && hc < (hbp+560))
-		begin
+		else if (   (hc >= (hbp + tile_offset + line_thickness*2 + tile_width*2) && hc < (hbp + tile_offset + tile_width*3 + line_thickness*2))
+					&& (vc >= (vbp + tile_offset + line_thickness + tile_width) && vc < (vbp + tile_offset + tile_width*2 + line_thickness)))
+		begin // Tile 5
 			red = 3'b000;
-			green = 3'b000;
+			green = 3'b111;
 			blue = 2'b11;
 		end
-		// display black bar
-		else if (hc >= (hbp+560) && hc < (hbp+640))
-		begin
-			red = 3'b000;
+		// Begin Row 3
+		else if (   (hc >= (hbp + tile_offset) && hc < (hbp + tile_offset + tile_width))
+					&& (vc >= (vbp + tile_offset + line_thickness*2 + tile_width*2) && vc < (vbp + tile_offset + tile_width*3 + line_thickness*2)))
+		begin // Tile 6
+			red = 3'b010;
 			green = 3'b000;
 			blue = 2'b00;
+		end
+		else if (   (hc >= (hbp + tile_offset + line_thickness + tile_width) && hc < (hbp + tile_offset + tile_width*2 + line_thickness))
+					&& (vc >= (vbp + tile_offset + line_thickness*2 + tile_width*2) && vc < (vbp + tile_offset + tile_width*3 + line_thickness*2)))
+		begin // Tile 7
+			red = 3'b000;
+			green = 3'b010;
+			blue = 2'b00;
+		end
+		else if (   (hc >= (hbp + tile_offset + line_thickness*2 + tile_width*2) && hc < (hbp + tile_offset + tile_width*3 + line_thickness*2))
+					&& (vc >= (vbp + tile_offset + line_thickness*2 + tile_width*2) && vc < (vbp + tile_offset + tile_width*3 + line_thickness*2)))
+		begin // Tile 8
+			red = 3'b010;
+			green = 3'b010;
+			blue = 2'b00;
+		end
+		else if (hc >= (hbp) && hc < (hfp))
+		begin
+			red = 3'b111;
+			green = 3'b111;
+			blue = 2'b11;
 		end
 		// we're outside active horizontal range so display black
 		else
