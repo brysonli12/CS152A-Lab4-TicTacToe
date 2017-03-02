@@ -5,17 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/152/Desktop/Lab4proj/VGA/vga640x480.v" Line 92: Concatenation with unsized literal; will interpret as 32 bits
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/152/Desktop/Lab4proj/VGA/vga640x480.v" Line 93: Concatenation with unsized literal; will interpret as 32 bits
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/152/Desktop/Lab4proj/VGA/vga640x480.v" Line 92: Concatenation with unsized literal; will interpret as 32 bits
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/152/Desktop/Lab4proj/VGA/vga640x480.v" Line 93: Concatenation with unsized literal; will interpret as 32 bits
-</msg>
-
 </messages>
 

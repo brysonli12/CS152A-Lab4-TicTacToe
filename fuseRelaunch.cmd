@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/152/Desktop/Lab4proj/NERP_demo_top_isim_beh.exe" -prj "C:/Users/152/Desktop/Lab4proj/NERP_demo_top_beh.prj" "work.NERP_demo_top" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/tb_isim_beh.exe" -prj "C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/tb_beh.prj" "work.tb" "work.glbl" 
