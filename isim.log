@@ -190,3 +190,161 @@ X: 010000000
 O: 100000000
 Game Status: 001
 Stopped at time : 41 ns : File "C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 44
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Game Status: 001
+B
+B
+B
+B
+B
+B
+B
+X
+O
+X: 010000000
+O: 100000000
+Game Status: 001
+Stopped at time : 41 ns : File "C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 44
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Game Status: 001
+B
+B
+B
+B
+B
+B
+B
+X
+O
+X: 010000000
+O: 100000000
+Game Status: 001
+Stopped at time : 41 ns : File "C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 44
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Game Status: 000
+B
+B
+B
+B
+B
+B
+B
+X
+B
+X: 010000000
+O: 000000000
+Game Status: 000
+Stopped at time : 42 ns : File "C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 46
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Game Status: 001
+B
+B
+B
+B
+B
+B
+B
+X
+O
+X: 010000000
+O: 100000000
+Game Status: 001
+Stopped at time : 41 ns : File "C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 44
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Game Status: 000
+Game Status: 001
+B
+B
+B
+B
+B
+B
+B
+X
+O
+X: 010000000
+O: 100000000
+Game Status: 001
+Stopped at time : 41 ns : File "C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 45
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Game Status: 000
+Game Status: 001
+B
+B
+B
+B
+B
+B
+B
+X
+O
+X: 010000000
+O: 100000000
+Game Status: 001
+Stopped at time : 41 ns : File "C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 45
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Game Status: 000
+Game Status: 001
+B
+B
+B
+B
+B
+B
+B
+X
+O
+X: 010000000
+O: 100000000
+Game Status: 001
+0
+Stopped at time : 41 ns : File "C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 48

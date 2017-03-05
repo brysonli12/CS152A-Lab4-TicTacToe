@@ -20,6 +20,7 @@ module tb;
 		move =1;//make move
 		player =0;//O
 		nextMove = 0; // top left
+		$display("Game Status: %b", status);
 		#20
 		move =1;//make move
 		player =1;//O
@@ -41,6 +42,9 @@ module tb;
 		$display("X: %b", X_state);
 		$display("O: %b", O_state);
 		$display("Game Status: %b", status);
+		$display(O_state == 9'b000_000_111 || O_state == 9'b000_111_000 || O_state == 9'b111_000_000 || 
+					O_state == 9'b100_100_100 || O_state == 9'b010_010_010 || O_state == 9'b001_001_001 ||
+					O_state == 9'b100_010_001 || O_state == 9'b001_010_100);
 		$finish;
 	end
 
