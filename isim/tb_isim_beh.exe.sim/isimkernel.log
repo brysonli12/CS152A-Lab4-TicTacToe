@@ -2,9 +2,9 @@ Command line:
    tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  57386
+     -socket  57649
 
-Sat Mar 04 23:54:17 2017
+Sun Mar 05 00:10:00 2017
 
 
  Elaboration Time: 0.0312 sec

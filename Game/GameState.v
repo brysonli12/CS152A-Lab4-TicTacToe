@@ -96,9 +96,9 @@ module GameState (
 				if(O_pos == 9'b000_000_111 || O_pos == 9'b000_111_000 || O_pos == 9'b111_000_000 || // horizontal
 					O_pos == 9'b100_100_100 || O_pos == 9'b010_010_010 || O_pos == 9'b001_001_001 || //vertical
 					O_pos == 9'b100_010_001 || O_pos == 9'b001_010_100) //diagonal
-						game_stats <= 1;
-				else if(O_pos ^ X_pos == 9'b111_111_111)
 						game_stats <= 2;
+				else if(O_pos ^ X_pos == 9'b111_111_111)
+						game_stats <= 3;
 			end
 			else // X move
 			begin

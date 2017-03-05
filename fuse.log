@@ -12,8 +12,7 @@ Compiling module GameState
 Compiling module tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 2 sub-compilation(s) to finish...
 Compiled 3 Verilog Units
 Built simulation executable C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/tb_isim_beh.exe
-Fuse Memory Usage: 28684 KB
-Fuse CPU Usage: 467 ms
+Fuse Memory Usage: 28408 KB
+Fuse CPU Usage: 421 ms

@@ -20,11 +20,12 @@ module tb;
 		move =1;//make move
 		player =0;//O
 		nextMove = 0; // top left
-		#250
+		#20
 		move =1;//make move
-		player =0;//O
+		player =1;//O
 		nextMove = 1; // top left
-		#250
+		$display("Game Status: %b", status);
+		#20
 		i = 0; j = 0;
 		while(i < 9 && j < 9)
 		begin
@@ -37,11 +38,13 @@ module tb;
 			if(i +1 %3 == 0) $display("\n");
 			i = i+1; j=j+1;
 		end
-		$display("Game Status: %d", status);
+		$display("X: %b", X_state);
+		$display("O: %b", O_state);
+		$display("Game Status: %b", status);
 		$finish;
 	end
 
-	always #3 clk = ~clk;
+	always #5 clk = ~clk;
 
 	GameState gs (
 		.rst(rst), // start over, new game
