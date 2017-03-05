@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: GameState.prj
 
@@ -41,16 +41,23 @@ TABLE OF CONTENTS
 =========================================================================
 Analyzing Verilog file "C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" into library work
 Parsing module <GameState>.
-
-
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.86 secs
- 
+ERROR:HDLCompiler:69 - "C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 27: <game_stats> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 81: <game_stats> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 83: <game_stats> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 91: <game_stats> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 93: <game_stats> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 142: <game_stats> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 144: <game_stats> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 152: <game_stats> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 154: <game_stats> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 159: <game_stats> is not declared.
+ERROR:HDLCompiler:598 - "C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 2: Module <GameState> ignored due to previous errors.
+Verilog file C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v ignored due to errors
 --> 
 
-Total memory usage is 181588 kilobytes
+Total memory usage is 181524 kilobytes
 
-Number of errors   :    0 (   0 filtered)
+Number of errors   :   11 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

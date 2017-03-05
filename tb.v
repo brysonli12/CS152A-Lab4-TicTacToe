@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-module tb;
+/*module tb;
 	reg clk;			//master clock = 100MHz
 	reg clr;			//right-most pushbutton for reset
 	//output wire [6:0] seg,	//7-segment display LEDs
@@ -48,14 +48,17 @@ module tb;
 		green <= 0;
 		blue <= 0;
 		hsync <= 0;
-		vsync <= 0;*/
+		vsync <= 0;
 	end
 
 
 
 	always #5 clk = ~clk;
 
-endmodule
+endmodule*/
+
+
+
 
 /*
 module NERP_demo_top(

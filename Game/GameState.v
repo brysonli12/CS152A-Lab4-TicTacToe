@@ -15,12 +15,19 @@ module GameState (
 	// 2 (10)means that O has won
 	// 3 (11)means that there is a draw
 	// 4 (100)invalid move
+							
 	);
 
 	reg [8:0] X_pos;
 	reg [8:0] O_pos;
-	
+	reg game_stats = 0;
+
+		
 	// MAKE A MOVE
+	// Tile Blocks
+	// 0 | 1 | 2
+	// 3 | 4 | 5
+	// 6 | 7 | 8
 	always @ (posedge clk or posedge rst)
 	begin
 		if (rst) begin
@@ -30,44 +37,45 @@ module GameState (
 		end
 		else if(move  && ((X_pos & O_pos) == 0))
 		// if current board is valid AND you want to make a move (input from user!)
+		// by default the board would be valid, but this is just a check
 		begin
 			if(player == 0) // O move
 			begin
 				case(nextMove)
-					1: // tile 1, O
-						if(X_pos[8] == 0 && O_pos[8] != 1) // if no move made yet
+					0: // tile 0, O
+						if(X_pos[8] | O_pos[8] != 1) // if no move made yet
 							O_pos[8] <= 1;
 
-					2: // tile 2, O
-						if(X_pos[7] == 0 && O_pos[7] != 1) // if no move made yet
+					1: // tile 1, O
+						if(X_pos[7] | O_pos[7] != 1) // if no move made yet
 							O_pos[7] <= 1;
 
-					3: // tile 3, O
-						if(X_pos[6] == 0 && O_pos[6] != 1) // if no move made yet
+					2: // tile 2, O
+						if(X_pos[6] | O_pos[6] != 1) // if no move made yet
 							O_pos[6] <= 1;
 
-					4: // tile 4, O
-						if(X_pos[5] == 0 && O_pos[5] != 1) // if no move made yet
+					3: // tile 3, O
+						if(X_pos[5] | O_pos[5] != 1) // if no move made yet
 							O_pos[5] <= 1;
 
-					5: // tile 5, O
-						if(X_pos[4] == 0 && O_pos[4] != 1) // if no move made yet
+					4: // tile 4, O
+						if(X_pos[4] | O_pos[4] != 1) // if no move made yet
 							O_pos[4] <= 1;
 
-					6: // tile 6, O
-						if(X_pos[3] == 0 && O_pos[3] != 1) // if no move made yet
+					5: // tile 5, O
+						if(X_pos[3] | O_pos[3] != 1) // if no move made yet
 							O_pos[3] <= 1;
 
-					7: // tile 7, O
-						if(X_pos[2] == 0 && O_pos[2] != 1) // if no move made yet
+					6: // tile 6, O
+						if(X_pos[2] | O_pos[2] != 1) // if no move made yet
 							O_pos[2] <= 1;
 
-					8: // tile 8, O
-						if(X_pos[1] == 0 && O_pos[1] != 1) // if no move made yet
+					7: // tile 7, O
+						if(X_pos[1] | O_pos[1] != 1) // if no move made yet
 							O_pos[1] <= 1;
 
-					9: // tile 9, O
-						if(X_pos[0] == 0 && O_pos[0] != 1) // if no move made yet
+					8: // tile 8, O
+						if(X_pos[0] | O_pos[0] != 1) // if no move made yet
 							O_pos[0] <= 1;
 
 					default: // wrong move, do nothing 
@@ -77,7 +85,7 @@ module GameState (
 						
 				// UPDATE game state!
 				case(nextMove)
-					1,2,3,4,5,6,7,8,9: // tile 9, O
+					0,1,2,3,4,5,6,7,8: 
 						game_stats <= 0;
 					default: // wrong move, do nothing
 						game_stats <= 4;
@@ -95,40 +103,40 @@ module GameState (
 			else // X move
 			begin
 				case(nextMove)
-					1: // tile 1, X
-						if(O_pos[8] == 0 && X_pos[8] != 1) // if no move made yet
+					0: // tile 0, X
+						if(O_pos[8] | X_pos[8] != 1) // if no move made yet
 							X_pos[8] <= 1;
 
-					2: // tile 2, X
-						if(O_pos[7] == 0 && X_pos[7] != 1) // if no move made yet
+					1: // tile 1, X
+						if(O_pos[7] | X_pos[7] != 1) // if no move made yet
 							X_pos[7] <= 1;
 
-					3: // tile 3, X
-						if(O_pos[6] == 0 && X_pos[6] != 1) // if no move made yet
+					2: // tile 2, X
+						if(O_pos[6] | X_pos[6] != 1) // if no move made yet
 							X_pos[6] <= 1;
 
-					4: // tile 4, X
-						if(O_pos[5] == 0 && X_pos[5] != 1) // if no move made yet
+					3: // tile 3, X
+						if(O_pos[5] | X_pos[5] != 1) // if no move made yet
 							X_pos[5] <= 1;
 
-					5: // tile 5, X
-						if(O_pos[4] == 0 && X_pos[4] != 1) // if no move made yet
+					4: // tile 4, X
+						if(O_pos[4] | X_pos[4] != 1) // if no move made yet
 							X_pos[4] <= 1;
 
-					6: // tile 6, X
-						if(O_pos[3] == 0 && X_pos[3] != 1) // if no move made yet
+					5: // tile 5, X
+						if(O_pos[3] | X_pos[3] != 1) // if no move made yet
 							X_pos[3] <= 1;
 
-					7: // tile 7, X
-						if(O_pos[2] == 0 && X_pos[2] != 1) // if no move made yet
+					6: // tile 6, X
+						if(O_pos[2] | X_pos[2] != 1) // if no move made yet
 							X_pos[2] <= 1;
 
-					8: // tile 8, X
-						if(O_pos[1] == 0 && X_pos[1] != 1) // if no move made yet
+					7: // tile 7, X
+						if(O_pos[1] | X_pos[1] != 1) // if no move made yet
 							X_pos[1] <= 1;
 
-					9: // tile 9, X
-						if(O_pos[0] == 0 && X_pos[0] != 1) // if no move made yet
+					8: // tile 8, X
+						if(O_pos[0] | X_pos[0] != 1) // if no move made yet
 							X_pos[0] <= 1;
 
 					default: // wrong move, do nothing 
@@ -138,10 +146,10 @@ module GameState (
 							
 				// CHECK WIN for X
 				case(nextMove)
-					1,2,3,4,5,6,7,8,9: // X
-					game_stats <= 0;
-				default: // wrong move, do nothing
-					game_stats <= 4;
+					0,1,2,3,4,5,6,7,8: // X
+						game_stats <= 0;
+					default: // wrong move, do nothing
+						game_stats <= 4;
 				endcase
 							
 				// Check if X won
@@ -159,4 +167,7 @@ module GameState (
 	assign GameStatus = game_stats; 
 	assign X_state = X_pos;
 	assign O_state = O_pos;
+
+
+
 endmodule
