@@ -23,11 +23,6 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="NERP_demo_top_guide.ncd" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="vga640x480.prj"/>
-    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="vga640x480.stx"/>
-    <file xil_pn:fileType="FILE_XST" xil_pn:name="vga640x480.xst"/>
-    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
