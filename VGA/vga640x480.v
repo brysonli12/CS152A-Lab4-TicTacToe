@@ -602,6 +602,7 @@ begin
 				blue = 2'b00;
 			end
 		end
+		
 		else if (hc >= (hbp) && hc < (hfp))
 		begin
 			red = 3'b111;
