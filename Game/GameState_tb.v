@@ -20,12 +20,14 @@ module tb;
 		move =1;//make move
 		player =0;//O
 		nextMove = 0; // top left
-		$display("Game Status: %b", status);
+		#10
+		$display("Game Status: %b X-state: %b O-state: %b", status, X_state, O_state);
 		#20
 		move =1;//make move
 		player =1;//O
 		nextMove = 1; // top left
-		$display("Game Status: %b", status);
+		#5
+		$display("Game Status: %b X-state: %b O-state: %b", status, X_state, O_state);
 		#20
 		i = 0; j = 0;
 		while(i < 9 && j < 9)

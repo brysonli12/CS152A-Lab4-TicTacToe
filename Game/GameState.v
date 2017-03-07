@@ -10,7 +10,8 @@ module GameState (
 	output wire [8:0] X_state,
 	output wire [8:0] O_state,
 	output wire [2:0] GameStatus 
-	// 0 (00) means game has just started/ can keep going on
+	// 0 (000) AI move
+	// 7 (111) Player Move
 	// 1 (01) means that X has won
 	// 2 (10)means that O has won
 	// 3 (11)means that there is a draw
@@ -97,7 +98,7 @@ module GameState (
 					O_pos == 9'b100_100_100 || O_pos == 9'b010_010_010 || O_pos == 9'b001_001_001 || //vertical
 					O_pos == 9'b100_010_001 || O_pos == 9'b001_010_100) //diagonal
 						game_stats <= 2;
-				else if(O_pos ^ X_pos == 9'b111_111_111)
+				else if((O_pos | X_pos) == 9'b111_111_111)
 						game_stats <= 3;
 			end
 			else // X move
@@ -158,7 +159,7 @@ module GameState (
 					X_pos == 9'b100_100_100 || X_pos == 9'b010_010_010 || X_pos == 9'b001_001_001 || //vertical
 					X_pos == 9'b100_010_001 || X_pos == 9'b001_010_100) //diagonal
 					game_stats <= 1;
-				else if(O_pos ^ X_pos == 9'b111_111_111)
+				else if((O_pos | X_pos) == 9'b111_111_111)
 					game_stats <= 3;
 			end
 		end
