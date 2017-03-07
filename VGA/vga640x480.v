@@ -21,7 +21,9 @@
 module vga640x480(
 	input wire pix_en,		//pixel clock: 25MHz
 	input wire clk,			//100MHz
-	input wire rst,			//asynchronous reset
+	input wire rst,			//asynchronous reset,
+	input wire [8:0] o_vec,
+	input wire [8:0] x_vec,
 	output wire hsync,		//horizontal sync out
 	output wire vsync,		//vertical sync out
 	output reg [2:0] red,	//red vga output
@@ -93,8 +95,8 @@ parameter [9:0] tile_offset = 10;
 parameter [9:0] tile_width = 50;
 parameter [9:0] radius = 15;
 parameter [9:0] circle_thickness = 2;
-parameter [9:0] o_vec = 9'b111111111;
-parameter [9:0] x_vec = 9'b000000000;
+//parameter [9:0] o_vec = 9'b111111111;
+//parameter [9:0] x_vec = 9'b000000000;
 reg [50:0] x_arr [50:0];//INDEX {..., 1, 0}. Note that 50 should be equal to tile_width
 reg [50:0] y_arr [50:0];//INDEX {..., 1, 0}. Note that 50 should be equal to tile_width
 parameter [2500:0] o_pic = {
