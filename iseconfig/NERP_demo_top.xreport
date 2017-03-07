@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-03-07T10:29:48</DateModified>
+  <DateModified>2017-03-07T10:40:57</DateModified>
   <ModuleName>NERP_demo_top</ModuleName>
-  <SummaryTimeStamp>2017-03-07T10:28:39</SummaryTimeStamp>
+  <SummaryTimeStamp>2017-03-07T10:40:09</SummaryTimeStamp>
   <SavedFilePath>C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/iseconfig/NERP_demo_top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/152/Desktop/CS152A-Lab4-TicTacToe\</ImplementationReportsDirectory>
   <DateInitialized>2017-02-28T10:06:38</DateInitialized>
