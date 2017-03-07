@@ -94,8 +94,112 @@ parameter [9:0] tile_width = 50;
 parameter [9:0] radius = 15;
 parameter [9:0] circle_thickness = 2;
 parameter [9:0] o_vec = 9'b010010000;
+parameter [9:0] x_vec = 9'b100001000;
 reg [50:0] x_arr [50:0];//INDEX {..., 1, 0}. Note that 50 should be equal to tile_width
 reg [50:0] y_arr [50:0];//INDEX {..., 1, 0}. Note that 50 should be equal to tile_width
+parameter [2500:0] o_pic = 2500'b
+00000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000
+00000000000000000001111111111100000000000000000000
+00000000000000001111111111111111100000000000000000
+00000000000000011111111101111111110000000000000000
+00000000000001111110000000000011111100000000000000
+00000000000011111000000000000000111110000000000000
+00000000000111100000000000000000001111000000000000
+00000000001111000000000000000000000111100000000000
+00000000001110000000000000000000000011100000000000
+00000000011100000000000000000000000001110000000000
+00000000111100000000000000000000000001111000000000
+00000000111000000000000000000000000000111000000000
+00000000111000000000000000000000000000111000000000
+00000001110000000000000000000000000000011100000000
+00000001110000000000000000000000000000011100000000
+00000001110000000000000000000000000000011100000000
+00000001110000000000000000000000000000011100000000
+00000001110000000000000000000000000000011100000000
+00000001100000000000000000000000000000001100000000
+00000001110000000000000000000000000000011100000000
+00000001110000000000000000000000000000011100000000
+00000001110000000000000000000000000000011100000000
+00000001110000000000000000000000000000011100000000
+00000001110000000000000000000000000000011100000000
+00000000111000000000000000000000000000111000000000
+00000000111000000000000000000000000000111000000000
+00000000111100000000000000000000000001111000000000
+00000000011100000000000000000000000001110000000000
+00000000001110000000000000000000000011100000000000
+00000000001111000000000000000000000111100000000000
+00000000000111100000000000000000001111000000000000
+00000000000011111000000000000000111110000000000000
+00000000000001111110000000000011111100000000000000
+00000000000000011111111101111111110000000000000000
+00000000000000001111111111111111100000000000000000
+00000000000000000001111111111100000000000000000000
+00000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000;
+
+parameter [2500:0] x_pic = 2500'b
+00000000000000000000000000000000000000000000000000
+01110000000000000000000000000000000000000000000111
+00111000000000000000000000000000000000000000001110
+00011100000000000000000000000000000000000000011100
+00001110000000000000000000000000000000000000111000
+00000111000000000000000000000000000000000001110000
+00000011100000000000000000000000000000000011100000
+00000001110000000000000000000000000000000111000000
+00000000111000000000000000000000000000001110000000
+00000000011100000000000000000000000000011100000000
+00000000001110000000000000000000000000111000000000
+00000000000111000000000000000000000001110000000000
+00000000000011100000000000000000000011100000000000
+00000000000001110000000000000000000111000000000000
+00000000000000111000000000000000001110000000000000
+00000000000000011100000000000000011100000000000000
+00000000000000001110000000000000111000000000000000
+00000000000000000111000000000001110000000000000000
+00000000000000000011100000000011100000000000000000
+00000000000000000001110000000111000000000000000000
+00000000000000000000111000001110000000000000000000
+00000000000000000000011100011100000000000000000000
+00000000000000000000001110111000000000000000000000
+00000000000000000000000111110000000000000000000000
+00000000000000000000000011100000000000000000000000
+00000000000000000000000111110000000000000000000000
+00000000000000000000001110111000000000000000000000
+00000000000000000000011100011100000000000000000000
+00000000000000000000111000001110000000000000000000
+00000000000000000001110000000111000000000000000000
+00000000000000000011100000000011100000000000000000
+00000000000000000111000000000001110000000000000000
+00000000000000001110000000000000111000000000000000
+00000000000000011100000000000000011100000000000000
+00000000000000111000000000000000001110000000000000
+00000000000001110000000000000000000111000000000000
+00000000000011100000000000000000000011100000000000
+00000000000111000000000000000000000001110000000000
+00000000001110000000000000000000000000111000000000
+00000000011100000000000000000000000000011100000000
+00000000111000000000000000000000000000001110000000
+00000001110000000000000000000000000000000111000000
+00000011100000000000000000000000000000000011100000
+00000111000000000000000000000000000000000001110000
+00001110000000000000000000000000000000000000111000
+00011100000000000000000000000000000000000000011100
+00111000000000000000000000000000000000000000001110
+01110000000000000000000000000000000000000000000111
+01100000000000000000000000000000000000000000000011
+01000000000000000000000000000000000000000000000001;
 
 initial begin
 //	line_x[0] = 100;
@@ -138,69 +242,365 @@ begin
 		else if (   (hc >= (hbp + tile_offset) && hc < (hbp + tile_offset + tile_width))
 					&& (vc >= (vbp + tile_offset) && vc < (vbp + tile_offset + tile_width)))
 		begin // Tile 0
-			
-			red = 3'b111;
-			green = 3'b000;
-			blue = 2'b00;
+
+			if (o_vec[0])
+			begin
+				if (o_pic[(hc - hbp - tile_offset) + (vc - vbp - tile_offset) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b111;
+					green = 3'b000;
+					blue = 2'b00;
+				end
+			end
+			else if (x_vec[0])
+			begin
+				if (x_pic[(hc - hbp - tile_offset) + (vc - vbp - tile_offset) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b111;
+					green = 3'b000;
+					blue = 2'b00;
+				end
+			end
+			else
+			begin
+				red = 3'b111;
+				green = 3'b000;
+				blue = 2'b00;
+			end
 			
 		end
 		else if (   (hc >= (hbp + tile_offset + line_thickness + tile_width) && hc < (hbp + tile_offset + tile_width*2 + line_thickness))
 					&& (vc >= (vbp + tile_offset) && vc < (vbp + tile_offset + tile_width)))
-		begin // Tile 1
-			red = 3'b000;
-			green = 3'b111;
-			blue = 2'b00;
-		end
+		begin //Tile 1
+			if (o_vec[1])
+			begin
+				if (o_pic[(hc - hbp - tile_offset - tile_width) + (vc - vbp - tile_offset) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b000;
+					green = 3'b111;
+					blue = 2'b00;
+				end
+			end
+			else if (x_vec[1])
+			begin
+				if (x_pic[(hc - hbp - tile_offset - tile_width) + (vc - vbp - tile_offset) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b000;
+					green = 3'b111;
+					blue = 2'b00;
+				end
+			end
+			else
+			begin
+				red = 3'b000;
+				green = 3'b111;
+				blue = 2'b00;
+			end
 		else if (   (hc >= (hbp + tile_offset + line_thickness*2 + tile_width*2) && hc < (hbp + tile_offset + tile_width*3 + line_thickness*2))
 					&& (vc >= (vbp + tile_offset) && vc < (vbp + tile_offset + tile_width)))
 		begin // Tile 2
-			red = 3'b000;
-			green = 3'b000;
-			blue = 2'b11;
+			if (o_vec[2])
+			begin
+				if (o_pic[(hc - hbp - tile_offset - tile_width * 2) + (vc - vbp - tile_offset) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b000;
+					green = 3'b000;
+					blue = 2'b11;
+				end
+			end
+			else if (x_vec[2])
+			begin
+				if (x_pic[(hc - hbp - tile_offset - tile_width * 2) + (vc - vbp - tile_offset) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b000;
+					green = 3'b000;
+					blue = 2'b11;
+				end
+			end
+			else
+			begin
+				red = 3'b000;
+				green = 3'b000;
+				blue = 2'b11;
+			end
 		end
 		// Begin Row 2
 		else if (   (hc >= (hbp + tile_offset) && hc < (hbp + tile_offset + tile_width))
 					&& (vc >= (vbp + tile_offset + line_thickness + tile_width) && vc < (vbp + tile_offset + tile_width*2 + line_thickness)))
 		begin // Tile 3
-			red = 3'b111;
-			green = 3'b111;
-			blue = 2'b00;
+			if (o_vec[3])
+			begin
+				if (o_pic[(hc - hbp - tile_offset) + (vc - vbp - tile_offset - tile_width) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b00;
+				end
+			end
+			else if (x_vec[3])
+			begin
+				if (x_pic[(hc - hbp - tile_offset) + (vc - vbp - tile_offset - tile_width) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b00;
+				end
+			end
+			else
+			begin
+				red = 3'b111;
+				green = 3'b111;
+				blue = 2'b00;
+			end
 		end
 		else if (   (hc >= (hbp + tile_offset + line_thickness + tile_width) && hc < (hbp + tile_offset + tile_width*2 + line_thickness))
 					&& (vc >= (vbp + tile_offset + line_thickness + tile_width) && vc < (vbp + tile_offset + tile_width*2 + line_thickness)))
 		begin // Tile 4
-			red = 3'b111;
-			green = 3'b000;
-			blue = 2'b11;
+			if (o_vec[4])
+			begin
+				if (o_pic[(hc - hbp - tile_offset - tile_width) + (vc - vbp - tile_offset - tile_width) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b111;
+					green = 3'b000;
+					blue = 2'b11;
+				end
+			end
+			else if (x_vec[4])
+			begin
+				if (x_pic[(hc - hbp - tile_offset - tile_width) + (vc - vbp - tile_offset - tile_width) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b111;
+					green = 3'b000;
+					blue = 2'b11;
+				end
+			end
+			else
+			begin
+				red = 3'b111;
+				green = 3'b000;
+				blue = 2'b11;
+			end
 		end
 		else if (   (hc >= (hbp + tile_offset + line_thickness*2 + tile_width*2) && hc < (hbp + tile_offset + tile_width*3 + line_thickness*2))
 					&& (vc >= (vbp + tile_offset + line_thickness + tile_width) && vc < (vbp + tile_offset + tile_width*2 + line_thickness)))
 		begin // Tile 5
-			red = 3'b000;
-			green = 3'b111;
-			blue = 2'b11;
+			if (o_vec[5])
+			begin
+				if (o_pic[(hc - hbp - tile_offset - tile_width * 2) + (vc - vbp - tile_offset - tile_width) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b000;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+			end
+			else if (x_vec[5])
+			begin
+				if (x_pic[(hc - hbp - tile_offset - tile_width * 2) + (vc - vbp - tile_offset - tile_width) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b000;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+			end
+			else
+			begin
+				red = 3'b000;
+				green = 3'b111;
+				blue = 2'b11;
+			end
 		end
 		// Begin Row 3
 		else if (   (hc >= (hbp + tile_offset) && hc < (hbp + tile_offset + tile_width))
 					&& (vc >= (vbp + tile_offset + line_thickness*2 + tile_width*2) && vc < (vbp + tile_offset + tile_width*3 + line_thickness*2)))
 		begin // Tile 6
-			red = 3'b010;
-			green = 3'b000;
-			blue = 2'b00;
+			if (o_vec[6])
+			begin
+				if (o_pic[(hc - hbp - tile_offset) + (vc - vbp - tile_offset - tile_width * 2) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b010;
+					green = 3'b000;
+					blue = 2'b00;
+				end
+			end
+			else if (x_vec[6])
+			begin
+				if (x_pic[(hc - hbp - tile_offset) + (vc - vbp - tile_offset - tile_width * 2) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b010;
+					green = 3'b000;
+					blue = 2'b00;
+				end
+			end
+			else
+			begin
+				red = 3'b010;
+				green = 3'b000;
+				blue = 2'b00;
+			end
 		end
 		else if (   (hc >= (hbp + tile_offset + line_thickness + tile_width) && hc < (hbp + tile_offset + tile_width*2 + line_thickness))
 					&& (vc >= (vbp + tile_offset + line_thickness*2 + tile_width*2) && vc < (vbp + tile_offset + tile_width*3 + line_thickness*2)))
 		begin // Tile 7
-			red = 3'b000;
-			green = 3'b010;
-			blue = 2'b00;
+			if (o_vec[7])
+			begin
+				if (o_pic[(hc - hbp - tile_offset - tile_width) + (vc - vbp - tile_offset - tile_width * 2) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b000;
+					green = 3'b010;
+					blue = 2'b00;
+				end
+			end
+			else if (x_vec[7])
+			begin
+				if (x_pic[(hc - hbp - tile_offset - tile_width) + (vc - vbp - tile_offset - tile_width * 2) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b000;
+					green = 3'b010;
+					blue = 2'b00;
+				end
+			end
+			else
+			begin
+				red = 3'b000;
+				green = 3'b010;
+				blue = 2'b00;
+			end
 		end
 		else if (   (hc >= (hbp + tile_offset + line_thickness*2 + tile_width*2) && hc < (hbp + tile_offset + tile_width*3 + line_thickness*2))
 					&& (vc >= (vbp + tile_offset + line_thickness*2 + tile_width*2) && vc < (vbp + tile_offset + tile_width*3 + line_thickness*2)))
 		begin // Tile 8
-			red = 3'b010;
-			green = 3'b010;
-			blue = 2'b00;
+			if (o_vec[8])
+			begin
+				if (o_pic[(hc - hbp - tile_offset - tile_width * 2) + (vc - vbp - tile_offset - tile_width * 2) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b010;
+					green = 3'b010;
+					blue = 2'b00;
+				end
+			end
+			else if (x_vec[8])
+			begin
+				if (x_pic[(hc - hbp - tile_offset - tile_width * 2) + (vc - vbp - tile_offset - tile_width * 2) * 50])
+				begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else 
+				begin
+					red = 3'b010;
+					green = 3'b010;
+					blue = 2'b00;
+				end
+			end
+			else
+			begin
+				red = 3'b010;
+				green = 3'b010;
+				blue = 2'b00;
+			end
 		end
 		else if (hc >= (hbp) && hc < (hfp))
 		begin
