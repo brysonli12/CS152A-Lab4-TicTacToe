@@ -36,23 +36,27 @@ module Game(
 
 // VGA display clock interconnect
 wire pix_en;
+wire logic_en;//logic clock interconnect
+wire logic_en_delay;//logic clock interconnect
 
-reg rst;
+reg rst_vga;
 reg rst_ff;
  
 always @(posedge clk or posedge clr) begin
 	if (clr) begin
-		{rst,rst_ff} <= 2'b11;
+		{rst_vga,rst_ff} <= 2'b11;
 	end
 	else begin
-		{rst,rst_ff} <= {rst_ff,1'b0};
+		{rst_vga,rst_ff} <= {rst_ff,1'b0};
 	end
 end
 
 // generate 7-segment clock & display clock
 clockdiv U1(
 	.clk(clk),
-	.rst(rst),
+	.rst(rst_vga),
+	.logic_en(logic_en),
+	.logic_en_1(logic_en_delay),
 	.pix_en(pix_en)
 	);
 
@@ -61,18 +65,97 @@ wire player;
 reg nextMove;
 
 
+/* DEBOUCNING INPUT */
+
+	
+	wire btnMove_sync;
+	wire rst;
+
+	
+	wire AI_switch;
+	wire switch1, switch2, switch3, switch4;
+	
+	Synchronizer rst_sync(
+		.clk(clk),
+		.async_in(btnReset),
+		.reset(1'b0),
+		.synch_out(rst)
+	);
+	
+	Synchronizer input_move_sync(
+		.clk(clk),
+		.async_in(btnInput),
+		.reset(rst),
+		.synch_out(btnMove_sync)
+	);
+	
+	Synchronizer AI_sw_sync(
+		.clk(clk),
+		.async_in(sw[0]),
+		.reset(rst),
+		.synch_out(AI_switch)
+	);
+		// syncrhonize user's move input
+	Synchronizer input1_sw_sync(
+		.clk(clk),
+		.async_in(sw[1]),
+		.reset(rst),
+		.synch_out(switch1)
+	);
+
+	Synchronizer input2_sw_sync(
+		.clk(clk),
+		.async_in(sw[2]),
+		.reset(rst),
+		.synch_out(switch2)
+	);
+	
+	Synchronizer input3_sw_sync(
+		.clk(clk),
+		.async_in(sw[3]),
+		.reset(rst),
+		.synch_out(switch3)
+	);
+
+	Synchronizer input4_sw_sync(
+		.clk(clk),
+		.async_in(sw[4]),
+		.reset(rst),
+		.synch_out(switch4)
+	);
+	
+	Debouncer deb_S(
+		.clk(clk),
+		.clk2(logic_en),
+		.real_btn_input(btnMove_sync),
+		.debounced_btn_input(move)
+	);
+	
+	always @(*)
+	begin	nextMove = {switch4, switch3, switch2, switch1};
+	end
+
 
 wire [8:0] X_state;
 wire [8:0] O_state;
 wire [2:0] GameStatus;
+wire [8:0] AIMove;
+
+SimpleAI(
+	X_state,
+	O_state,
+	AIMove 
+	);
 
 GameState state(
 	.rst(rst),
 	.move(move),
-	.clk(clk),
+	.clk(logic_en_delay),
 	
 	.player(player),
 	.nextMove(nextMove),
+	.AIMove(AIMove),
+	
 	.X_state(X_state),
 	.O_state(O_state),
 	.GameStatus(GameStatus)
@@ -83,7 +166,7 @@ GameState state(
 vga640x480 U3(
 	.pix_en(pix_en),
 	.clk(clk),
-	.rst(rst),
+	.rst(rst_vga),
 	.hsync(hsync),
 	.vsync(vsync),
 	.red(red),

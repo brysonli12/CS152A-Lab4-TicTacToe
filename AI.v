@@ -1,9 +1,8 @@
 `timescale 1ns / 1ps
 module SimpleAI (
-	input clk,
 	input [8:0] X_state,
 	input [8:0] O_state,
-	output wire [3:0] AIMove 
+	output wire [8:0] AIMove 
 	);
 
     wire [8:0] win, block, empty;
@@ -75,7 +74,7 @@ module Empty(
     input [8:0] in,
     output [8:0] out);
 
-    RArb #(9) ra({in[4],in[0],in[2],in[6],in[8],in[1],in[3],in[5],in[7]},
+    RARb #(9) ra({in[4],in[0],in[2],in[6],in[8],in[1],in[3],in[5],in[7]},
         {out[4],out[0],out[2],out[6],out[8],out[1],out[3],out[5],out[7]}) ;
 endmodule
 
@@ -89,7 +88,7 @@ module Select3(
 
 
     wire [26:0] x;
-    RArb #(27) ra({a, b, c}, x);
+    RARb #(27) ra({a, b, c}, x);
 
     assign out = x[26:18] | x[17:9] | x[8:0];
 

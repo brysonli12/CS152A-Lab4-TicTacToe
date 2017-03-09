@@ -6,7 +6,8 @@ module GameState (
 	input clk,
 	
 	input player, // 1 for X, 0 for O
-	input [3:0] nextMove, // 4 digits, decides on location to try to make a move
+	input [3:0] nextMove, // 4 digits, decides on location to try to make a move,
+	input [8:0] AIMove,
 	output wire [8:0] X_state,
 	output wire [8:0] O_state,
 	output wire [2:0] GameStatus 
@@ -29,14 +30,13 @@ module GameState (
 	// 0 | 1 | 2
 	// 3 | 4 | 5
 	// 6 | 7 | 8
-	always @ (posedge clk or posedge rst)
+	always @(*)
 	begin
-		if (rst) begin
-			game_stats <= 0; // game status
-			X_pos <= 0;
-			O_pos <= 0;
+		if(rst) begin
+			X_pos = 0;
+			O_pos = 0;
 		end
-		else if(move  && ((X_pos & O_pos) == 0))
+		else if(move)
 		// if current board is valid AND you want to make a move (input from user!)
 		// by default the board would be valid, but this is just a check
 		begin
@@ -45,45 +45,61 @@ module GameState (
 				case(nextMove)
 					0: // tile 0, O
 						if(X_pos[8] | O_pos[8] != 1) // if no move made yet
-							O_pos[8] <= 1;
+							O_pos[8] = 1;
 
 					1: // tile 1, O
 						if(X_pos[7] | O_pos[7] != 1) // if no move made yet
-							O_pos[7] <= 1;
+							O_pos[7] = 1;
 
 					2: // tile 2, O
 						if(X_pos[6] | O_pos[6] != 1) // if no move made yet
-							O_pos[6] <= 1;
+							O_pos[6] = 1;
 
 					3: // tile 3, O
 						if(X_pos[5] | O_pos[5] != 1) // if no move made yet
-							O_pos[5] <= 1;
+							O_pos[5] = 1;
 
 					4: // tile 4, O
 						if(X_pos[4] | O_pos[4] != 1) // if no move made yet
-							O_pos[4] <= 1;
+							O_pos[4] = 1;
 
 					5: // tile 5, O
 						if(X_pos[3] | O_pos[3] != 1) // if no move made yet
-							O_pos[3] <= 1;
+							O_pos[3] = 1;
 
 					6: // tile 6, O
 						if(X_pos[2] | O_pos[2] != 1) // if no move made yet
-							O_pos[2] <= 1;
+							O_pos[2] = 1;
 
 					7: // tile 7, O
 						if(X_pos[1] | O_pos[1] != 1) // if no move made yet
-							O_pos[1] <= 1;
+							O_pos[1] = 1;
 
 					8: // tile 8, O
 						if(X_pos[0] | O_pos[0] != 1) // if no move made yet
-							O_pos[0] <= 1;
+							O_pos[0] = 1;
 
 					default: // wrong move, do nothing 
 					//(taken care of in game status below)
 					;
 				endcase
 						
+				
+			end
+			else // X move
+			begin
+				X_pos = X_pos | AIMove;
+			end
+		end
+	end
+	
+	always @ (posedge clk or posedge rst)
+	begin
+		if (rst) begin
+			game_stats <= 0; // game status
+		end
+		else begin
+			if (move) begin
 				// UPDATE game state!
 				case(nextMove)
 					0,1,2,3,4,5,6,7,8: 
@@ -101,50 +117,7 @@ module GameState (
 				else if((O_pos | X_pos) == 9'b111_111_111)
 						game_stats <= 3;
 			end
-			else // X move
-			begin
-				case(nextMove)
-					0: // tile 0, X
-						if(O_pos[8] | X_pos[8] != 1) // if no move made yet
-							X_pos[8] <= 1;
-
-					1: // tile 1, X
-						if(O_pos[7] | X_pos[7] != 1) // if no move made yet
-							X_pos[7] <= 1;
-
-					2: // tile 2, X
-						if(O_pos[6] | X_pos[6] != 1) // if no move made yet
-							X_pos[6] <= 1;
-
-					3: // tile 3, X
-						if(O_pos[5] | X_pos[5] != 1) // if no move made yet
-							X_pos[5] <= 1;
-
-					4: // tile 4, X
-						if(O_pos[4] | X_pos[4] != 1) // if no move made yet
-							X_pos[4] <= 1;
-
-					5: // tile 5, X
-						if(O_pos[3] | X_pos[3] != 1) // if no move made yet
-							X_pos[3] <= 1;
-
-					6: // tile 6, X
-						if(O_pos[2] | X_pos[2] != 1) // if no move made yet
-							X_pos[2] <= 1;
-
-					7: // tile 7, X
-						if(O_pos[1] | X_pos[1] != 1) // if no move made yet
-							X_pos[1] <= 1;
-
-					8: // tile 8, X
-						if(O_pos[0] | X_pos[0] != 1) // if no move made yet
-							X_pos[0] <= 1;
-
-					default: // wrong move, do nothing 
-					//(taken care of in game status below)
-					;
-				endcase
-							
+			else begin
 				// CHECK WIN for X
 				case(nextMove)
 					0,1,2,3,4,5,6,7,8: // X
