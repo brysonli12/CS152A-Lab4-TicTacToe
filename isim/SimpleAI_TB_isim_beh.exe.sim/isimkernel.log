@@ -1,0 +1,28 @@
+Command line:
+   SimpleAI_TB_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49787
+
+Thu Mar 09 10:50:33 2017
+
+
+ Elaboration Time: 0.0624 sec
+
+ Current Memory Usage: 828.322 Meg
+
+ Total Signals          : 95
+ Total Nets             : 283
+ Total Signal Drivers   : 85
+ Total Blocks           : 25
+ Total Primitive Blocks : 19
+ Total Processes        : 87
+ Total Traceable Variables  : 24
+ Total Scalar Nets and Variables : 503
+
+ Total Simulation Time: 0.078 sec
+
+ Current Memory Usage: 671.035 Meg
+
+Thu Mar 09 11:50:49 2017
+
