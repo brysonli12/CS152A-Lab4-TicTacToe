@@ -7,22 +7,28 @@ module SimpleAI (
 	output wire [3:0] AIMove 
 	);
 
+    wire [8:0] win, block, empty;
 
-
-
+    // Win as X
+    TwoInGrid winX(X_state, O_state, win);
+    // Block O from Winning
+    TwoInGrid blockO(O_state, X_state, block);
+    // Pick a "Random" Empty square
+    Empty emptyx (~(X_state | O_state), empty); 
+    Select3 pick(win, block, empty, cout);
 endmodule
 
 
 
 module TwoInRow(
     input [2:0] Xin,
-    input [2:0] Oin,
+    input [2:0] Yin,
     output wire [2:0] cout
     );
 
-    assign cout[0] = ~Oin[0] & ~Xin[0] & Xin[1] & Xin[2];
-    assign cout[0] = ~Oin[1] & Xin[0] & ~Xin[1] & Xin[2];
-    assign cout[0] = ~Oin[2] & Xin[0] & Xin[1] & ~Xin[2];
+    assign cout[0] = ~Yin[0] & ~Xin[0] & Xin[1] & Xin[2];
+    assign cout[0] = ~Yin[1] & Xin[0] & ~Xin[1] & Xin[2];
+    assign cout[0] = ~Yin[2] & Xin[0] & Xin[1] & ~Xin[2];
 
 endmodule
 
@@ -55,4 +61,37 @@ module TwoInGrid(
     assign cout = rows | cols | 
         {diag1[2], 1'b0, 1'b0, 1'b0, diag1[1], 1'b0, 1'b0, 1'b0, diag1[0]} | //diag1
         {1'b0, 1'b0, diag2[2], 1'b0, diag2[1], 1'b0, diag2[0], 1'b0, 1'b0}; //diag2
+endmodule
+
+module Empty(
+    input [8:0] in,
+    output [8:0] out
+)
+
+    RArb #(9) ra({in[4],in[0],in[2],in[6],in[8],in[1],in[3],in[5],in[7]},
+        {out[4],out[0],out[2],out[6],out[8],out[1],out[3],out[5],out[7]}) ;
+endmodule
+
+
+// Arbitriter, selecting the most significant bit. 
+module RARb(r, g);
+    parameter n = 8;
+    input [n - 1 : 0] r;
+    output [n - 1 : 0] g;
+    wire [ n - 1  : 0 ] c = {1'b1, (~r[n-1:1] & c[n-1:1])};
+    assign g = r & c;
+endmodule
+
+module Select3(
+    input [8:0] a,
+    input [8:0] b,
+    input [8:0] c,
+    output wire [8:0] out) 
+
+
+    wire [26:0] x;
+    RArb #(27) ra({a, b, c}, x);
+
+    out = x[26:18] | x[17:9] | x[8:0];
+
 endmodule
