@@ -24,6 +24,7 @@ module vga640x480(
 	input wire rst,			//asynchronous reset,
 	input wire [8:0] o_vec,
 	input wire [8:0] x_vec,
+	input wire [2:0] game_status,
 	output wire hsync,		//horizontal sync out
 	output wire vsync,		//vertical sync out
 	output reg [2:0] red,	//red vga output
