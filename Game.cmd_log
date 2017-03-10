@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/User/Documents/GitHub/CS152A-Lab4-TicTacToe/Game.xst" -ofn "C:/Users/User/Documents/GitHub/CS152A-Lab4-TicTacToe/Game.syr" 

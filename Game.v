@@ -47,6 +47,7 @@ always @(posedge clk or posedge clr) begin
 		{rst_vga,rst_ff} <= 2'b11;
 	end
 	else begin
+			if(AI_move) begin end // TEMPORARY
 		{rst_vga,rst_ff} <= {rst_ff,1'b0};
 	end
 end
