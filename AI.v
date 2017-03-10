@@ -93,3 +93,16 @@ module Select3(
     assign out = x[26:18] | x[17:9] | x[8:0];
 
 endmodule
+
+module Select2(
+    input [8:0] a,
+    input [8:0] b,
+    output wire [8:0] out);
+
+
+    wire [17:0] x;
+    RARb #(18) ra({a, b}, x);
+
+    assign out = x[17:9] | x[8:0];
+
+endmodule
