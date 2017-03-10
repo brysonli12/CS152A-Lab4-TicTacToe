@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-03-09T11:50:53</DateModified>
+  <DateModified>2017-03-09T18:36:37</DateModified>
   <ModuleName>Game</ModuleName>
-  <SummaryTimeStamp>2017-03-09T11:50:33</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/iseconfig/Game.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/152/Desktop/CS152A-Lab4-TicTacToe</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2017-03-09T16:57:53</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/iseconfig/Game.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe\</ImplementationReportsDirectory>
   <DateInitialized>2017-03-09T09:55:22</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

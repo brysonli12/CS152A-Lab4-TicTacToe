@@ -22,7 +22,7 @@ module GameState (
 
 	reg [8:0] X_pos;
 	reg [8:0] O_pos;
-	reg game_stats;
+	reg game_stats = 0;
 
 		
 	// MAKE A MOVE

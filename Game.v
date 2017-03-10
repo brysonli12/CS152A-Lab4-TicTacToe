@@ -62,7 +62,7 @@ clockdiv U1(
 
 wire move; // Player indicates they want to make a move - debounced btnInput rising edge
 wire player;
-reg nextMove;
+reg [3:0] nextMove;
 
 
 /* DEBOUCNING INPUT */
@@ -141,10 +141,10 @@ wire [8:0] O_state;
 wire [2:0] GameStatus;
 wire [8:0] AIMove;
 
-SimpleAI(
-	X_state,
-	O_state,
-	AIMove 
+SimpleAI sa(
+	.X_state(X_state),
+	.O_state(O_state),
+	.AIMove(AIMove)
 	);
 
 GameState state(
@@ -167,6 +167,9 @@ vga640x480 U3(
 	.pix_en(pix_en),
 	.clk(clk),
 	.rst(rst_vga),
+	.o_vec(O_state),
+	.x_vec(X_state),
+	.game_status(GameStatus),
 	.hsync(hsync),
 	.vsync(vsync),
 	.red(red),
