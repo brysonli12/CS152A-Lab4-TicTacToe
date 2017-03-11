@@ -47,7 +47,7 @@ always @(posedge clk or posedge clr) begin
 		{rst_vga,rst_ff} <= 2'b11;
 	end
 	else begin
-			if(AI_move) begin end // TEMPORARY
+			//if(AI_move) begin end // TEMPORARY
 		{rst_vga,rst_ff} <= {rst_ff,1'b0};
 	end
 end
@@ -141,11 +141,18 @@ wire [8:0] X_state;
 wire [8:0] O_state;
 wire [2:0] GameStatus;
 wire [8:0] AIMove;
+wire [8:0] AIMove_hard;
 
 SimpleAI sa(
 	.X_state(X_state),
 	.O_state(O_state),
 	.AIMove(AIMove)
+	);
+	
+LookupTable hard_ai(
+	.X_state(X_state),
+	.O_state(O_state),
+	.AIMove(AIMove_hard)
 	);
 
 GameState state(
@@ -155,7 +162,9 @@ GameState state(
 	
 	.player(player),
 	.nextMove(nextMove),
+	.AISwitch(AI_switch),
 	.AIMove(AIMove),
+	.AIMove_Hard(AIMove_hard),
 	
 	.X_state(X_state),
 	.O_state(O_state),

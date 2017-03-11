@@ -7,7 +7,9 @@ module GameState (
 	
 	input player, // 1 for X, 0 for O
 	input [3:0] nextMove, // 4 digits, decides on location to try to make a move,
+	input AISwitch,
 	input [8:0] AIMove,
+	input [8:0] AIMove_Hard,
 	output wire [8:0] X_state,
 	output wire [8:0] O_state,
 	output wire [2:0] GameStatus 
@@ -87,8 +89,8 @@ module GameState (
 				
 			end
 			else // X move
-			begin
-				X_pos = X_pos | AIMove;
+			begin // easy if AI Switch is false, else, use hard move
+				X_pos = ((X_pos | AIMove) & ~AISwitch)| ((X_pos | AIMove_Hard) & AISwitch);
 			end
 		end
 	end

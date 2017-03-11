@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.49 secs
+Total CPU time to Xst completion: 0.31 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.49 secs
+Total CPU time to Xst completion: 0.31 secs
  
 --> Reading design: Game.prj
 
@@ -105,16 +105,6 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\VGA\vga640x480.v" into library work
-Parsing module <vga640x480>.
-Analyzing Verilog file "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\VGA\clockdiv.v" into library work
-Parsing module <clockdiv>.
-Analyzing Verilog file "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Synchronizer.v" into library work
-Parsing module <Synchronizer>.
-Analyzing Verilog file "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" into library work
-Parsing module <GameState>.
-Analyzing Verilog file "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Debouncer.v" into library work
-Parsing module <Debouncer>.
 Analyzing Verilog file "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\AI.v" into library work
 Parsing module <SimpleAI>.
 Parsing module <TwoInRow>.
@@ -123,6 +113,18 @@ Parsing module <RARb>.
 Parsing module <Empty>.
 Parsing module <Select3>.
 Parsing module <Select2>.
+Analyzing Verilog file "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\VGA\vga640x480.v" into library work
+Parsing module <vga640x480>.
+Analyzing Verilog file "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\VGA\clockdiv.v" into library work
+Parsing module <clockdiv>.
+Analyzing Verilog file "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Synchronizer.v" into library work
+Parsing module <Synchronizer>.
+Analyzing Verilog file "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Lookup.v" into library work
+Parsing module <LookupTable>.
+Analyzing Verilog file "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" into library work
+Parsing module <GameState>.
+Analyzing Verilog file "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Debouncer.v" into library work
+Parsing module <Debouncer>.
 Analyzing Verilog file "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game.v" into library work
 Parsing module <Game>.
 
@@ -136,7 +138,6 @@ Elaborating module <clockdiv>.
 WARNING:HDLCompiler:413 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\VGA\clockdiv.v" Line 44: Result of 19-bit expression is truncated to fit in 18-bit target.
 
 Elaborating module <Synchronizer>.
-WARNING:HDLCompiler:1127 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game.v" Line 96: Assignment to AI_switch ignored, since the identifier is never used
 
 Elaborating module <Debouncer>.
 
@@ -154,20 +155,25 @@ Elaborating module <Select3>.
 
 Elaborating module <RARb(n=27)>.
 
+Elaborating module <LookupTable>.
+
+Elaborating module <Select2>.
+
+Elaborating module <RARb(n=18)>.
+
 Elaborating module <GameState>.
-WARNING:HDLCompiler:413 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 108: Result of 3-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 116: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 110: Result of 3-bit expression is truncated to fit in 1-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 118: Result of 2-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 126: Result of 3-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 136: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 120: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 128: Result of 3-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v" Line 138: Result of 2-bit expression is truncated to fit in 1-bit target.
 
 Elaborating module <vga640x480>.
 WARNING:HDLCompiler:413 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\VGA\vga640x480.v" Line 70: Result of 11-bit expression is truncated to fit in 10-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\VGA\vga640x480.v" Line 79: Result of 11-bit expression is truncated to fit in 10-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\VGA\vga640x480.v" Line 91: Result of 32-bit expression is truncated to fit in 1-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\VGA\vga640x480.v" Line 92: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:634 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game.v" Line 64: Net <player> does not have a driver.
-WARNING:Xst:2972 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game.v" line 92. All outputs of instance <AI_sw_sync> of block <Synchronizer> are unconnected in block <Game>. Underlying logic will be removed.
+WARNING:HDLCompiler:634 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game.v" Line 65: Net <player> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -175,7 +181,6 @@ WARNING:Xst:2972 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game.v"
 
 Synthesizing Unit <Game>.
     Related source file is "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game.v".
-INFO:Xst:3210 - "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game.v" line 92: Output port <synch_out> of the instance <AI_sw_sync> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <player> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 1-bit register for signal <rst_vga>.
     Found 1-bit register for signal <rst_ff>.
@@ -251,6 +256,25 @@ Synthesizing Unit <RARb_2>.
 	no macro.
 Unit <RARb_2> synthesized.
 
+Synthesizing Unit <LookupTable>.
+    Related source file is "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Lookup.v".
+    Summary:
+	no macro.
+Unit <LookupTable> synthesized.
+
+Synthesizing Unit <Select2>.
+    Related source file is "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\AI.v".
+    Summary:
+	no macro.
+Unit <Select2> synthesized.
+
+Synthesizing Unit <RARb_3>.
+    Related source file is "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\AI.v".
+        n = 29'b00000000000000000000000010010
+    Summary:
+	no macro.
+Unit <RARb_3> synthesized.
+
 Synthesizing Unit <GameState>.
     Related source file is "C:\Users\User\Documents\GitHub\CS152A-Lab4-TicTacToe\Game\GameState.v".
     Found 1-bit register for signal <game_stats>.
@@ -295,12 +319,12 @@ Synthesizing Unit <vga640x480>.
 WARNING:Xst:647 - Input <game_status> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 10-bit register for signal <vc>.
     Found 10-bit register for signal <hc>.
-    Found 11-bit subtractor for signal <GND_31_o_GND_31_o_sub_301_OUT> created at line 587.
+    Found 11-bit subtractor for signal <GND_34_o_GND_34_o_sub_301_OUT> created at line 587.
     Found 32-bit subtractor for signal <n0375> created at line 587.
-    Found 11-bit subtractor for signal <GND_31_o_GND_31_o_sub_305_OUT> created at line 587.
-    Found 32-bit subtractor for signal <GND_31_o_GND_31_o_sub_306_OUT> created at line 587.
-    Found 10-bit adder for signal <hc[9]_GND_31_o_add_4_OUT> created at line 70.
-    Found 10-bit adder for signal <vc[9]_GND_31_o_add_6_OUT> created at line 79.
+    Found 11-bit subtractor for signal <GND_34_o_GND_34_o_sub_305_OUT> created at line 587.
+    Found 32-bit subtractor for signal <GND_34_o_GND_34_o_sub_306_OUT> created at line 587.
+    Found 10-bit adder for signal <hc[9]_GND_34_o_add_4_OUT> created at line 70.
+    Found 10-bit adder for signal <vc[9]_GND_34_o_add_6_OUT> created at line 79.
     Found 32-bit adder for signal <n0246> created at line 264.
     Found 32-bit adder for signal <n0255> created at line 305.
     Found 32-bit adder for signal <n0264> created at line 345.
@@ -310,10 +334,10 @@ WARNING:Xst:647 - Input <game_status> is never used. This port will be preserved
     Found 32-bit adder for signal <n0289> created at line 507.
     Found 32-bit adder for signal <n0304> created at line 547.
     Found 32-bit adder for signal <n0325> created at line 587.
+    Found 32-bit subtractor for signal <GND_34_o_GND_34_o_sub_308_OUT> created at line 587.
+    Found 32-bit subtractor for signal <GND_34_o_GND_34_o_sub_204_OUT> created at line 466.
     Found 32-bit subtractor for signal <n0378> created at line 547.
     Found 32-bit subtractor for signal <n0381> created at line 587.
-    Found 32-bit subtractor for signal <GND_31_o_GND_31_o_sub_204_OUT> created at line 466.
-    Found 32-bit subtractor for signal <GND_31_o_GND_31_o_sub_308_OUT> created at line 587.
     Found 32x6-bit multiplier for signal <n0263> created at line 345.
     Found 32x6-bit multiplier for signal <n0281> created at line 466.
     Found 32x6-bit multiplier for signal <n0324> created at line 587.
@@ -321,31 +345,31 @@ WARNING:Xst:647 - Input <game_status> is never used. This port will be preserved
     Found 4096x2-bit Read Only RAM for signal <_n8617>
     Found 4096x2-bit Read Only RAM for signal <_n12714>
     Found 4096x2-bit Read Only RAM for signal <_n16811>
-    Found 4096x2-bit Read Only RAM for signal <_n20908>
-    Found 4096x2-bit Read Only RAM for signal <_n25005>
-    Found 4096x2-bit Read Only RAM for signal <_n29102>
-    Found 4096x2-bit Read Only RAM for signal <_n33199>
-    Found 4096x2-bit Read Only RAM for signal <_n37296>
-    Found 10-bit comparator greater for signal <hc[9]_PWR_22_o_LessThan_4_o> created at line 69
-    Found 10-bit comparator lessequal for signal <vc[9]_PWR_22_o_LessThan_6_o> created at line 78
-    Found 10-bit comparator greater for signal <hc[9]_GND_31_o_LessThan_17_o> created at line 91
-    Found 10-bit comparator greater for signal <vc[9]_GND_31_o_LessThan_19_o> created at line 92
+    Found 4096x2-bit Read Only RAM for signal <_n20909>
+    Found 4096x2-bit Read Only RAM for signal <_n25006>
+    Found 4096x2-bit Read Only RAM for signal <_n29103>
+    Found 4096x2-bit Read Only RAM for signal <_n33200>
+    Found 4096x2-bit Read Only RAM for signal <_n37297>
+    Found 10-bit comparator greater for signal <hc[9]_PWR_25_o_LessThan_4_o> created at line 69
+    Found 10-bit comparator lessequal for signal <vc[9]_PWR_25_o_LessThan_6_o> created at line 78
+    Found 10-bit comparator greater for signal <hc[9]_GND_34_o_LessThan_17_o> created at line 91
+    Found 10-bit comparator greater for signal <vc[9]_GND_34_o_LessThan_19_o> created at line 92
     Found 10-bit comparator lessequal for signal <n0018> created at line 220
-    Found 10-bit comparator greater for signal <vc[9]_GND_31_o_LessThan_22_o> created at line 220
+    Found 10-bit comparator greater for signal <vc[9]_GND_34_o_LessThan_22_o> created at line 220
     Found 10-bit comparator greater for signal <n0022> created at line 223
-    Found 10-bit comparator greater for signal <hc[9]_GND_31_o_LessThan_24_o> created at line 223
+    Found 10-bit comparator greater for signal <hc[9]_GND_34_o_LessThan_24_o> created at line 223
     Found 10-bit comparator greater for signal <n0028> created at line 225
-    Found 10-bit comparator greater for signal <hc[9]_GND_31_o_LessThan_28_o> created at line 225
+    Found 10-bit comparator greater for signal <hc[9]_GND_34_o_LessThan_28_o> created at line 225
     Found 10-bit comparator greater for signal <n0035> created at line 227
-    Found 10-bit comparator greater for signal <vc[9]_GND_31_o_LessThan_32_o> created at line 227
+    Found 10-bit comparator greater for signal <vc[9]_GND_34_o_LessThan_32_o> created at line 227
     Found 10-bit comparator greater for signal <n0042> created at line 229
-    Found 10-bit comparator greater for signal <vc[9]_GND_31_o_LessThan_36_o> created at line 229
+    Found 10-bit comparator greater for signal <vc[9]_GND_34_o_LessThan_36_o> created at line 229
     Found 10-bit comparator lessequal for signal <n0073> created at line 326
     Found 10-bit comparator lessequal for signal <n0117> created at line 487
-    Found 10-bit comparator greater for signal <hc[9]_GND_31_o_LessThan_284_o> created at line 567
-    Found 10-bit comparator greater for signal <vc[9]_GND_31_o_LessThan_286_o> created at line 568
+    Found 10-bit comparator greater for signal <hc[9]_GND_34_o_LessThan_284_o> created at line 567
+    Found 10-bit comparator greater for signal <vc[9]_GND_34_o_LessThan_286_o> created at line 568
     Found 10-bit comparator lessequal for signal <n0188> created at line 608
-    Found 10-bit comparator greater for signal <hc[9]_PWR_22_o_LessThan_322_o> created at line 608
+    Found 10-bit comparator greater for signal <hc[9]_PWR_25_o_LessThan_322_o> created at line 608
     Summary:
 	inferred   9 RAM(s).
 	inferred   3 Multiplier(s).
@@ -369,8 +393,8 @@ Macro Statistics
  18-bit adder                                          : 1
  32-bit adder                                          : 9
  32-bit subtractor                                     : 6
-# Registers                                            : 19
- 1-bit register                                        : 15
+# Registers                                            : 21
+ 1-bit register                                        : 17
  10-bit register                                       : 2
  18-bit register                                       : 1
  2-bit register                                        : 1
@@ -390,7 +414,11 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1290 - Hierarchical block <AI_sw_sync> is unconnected in block <Game>.
+   It will be removed from the design.
 WARNING:Xst:1290 - Hierarchical block <sa> is unconnected in block <Game>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <hard_ai> is unconnected in block <Game>.
    It will be removed from the design.
 
 Synthesizing (advanced) Unit <clockdiv>.
@@ -400,7 +428,7 @@ Unit <clockdiv> synthesized (advanced).
 Synthesizing (advanced) Unit <vga640x480>.
 The following registers are absorbed into counter <hc>: 1 register on signal <hc>.
 The following registers are absorbed into counter <vc>: 1 register on signal <vc>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n16811> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n20909> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -411,7 +439,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n16811> will be implemented on LUTs
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n20908> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n33200> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -422,7 +450,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n20908> will be implemented on LUTs
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n25005> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n37297> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -433,7 +461,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n25005> will be implemented on LUTs
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n4520> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n8617> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -444,7 +472,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n4520> will be implemented on LUTs 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n8617> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n4520> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -455,7 +483,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n8617> will be implemented on LUTs 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n12714> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n16811> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -466,7 +494,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n12714> will be implemented on LUTs
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n29102> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n25006> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -477,7 +505,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n29102> will be implemented on LUTs
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n33199> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n29103> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -488,7 +516,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n33199> will be implemented on LUTs
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n37296> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n12714> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -517,8 +545,8 @@ Macro Statistics
 # Counters                                             : 3
  10-bit up counter                                     : 2
  18-bit up counter                                     : 1
-# Registers                                            : 17
- Flip-Flops                                            : 17
+# Registers                                            : 19
+ Flip-Flops                                            : 19
 # Comparators                                          : 20
  10-bit comparator greater                             : 15
  10-bit comparator lessequal                           : 5
@@ -533,8 +561,8 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 WARNING:Xst:2677 - Node <Mmult_n02631> of sequential type is unconnected in block <vga640x480>.
-WARNING:Xst:2677 - Node <Mmult_n03241> of sequential type is unconnected in block <vga640x480>.
 WARNING:Xst:2677 - Node <Mmult_n02811> of sequential type is unconnected in block <vga640x480>.
+WARNING:Xst:2677 - Node <Mmult_n03241> of sequential type is unconnected in block <vga640x480>.
 WARNING:Xst:2677 - Node <U1/q_16> of sequential type is unconnected in block <Game>.
 WARNING:Xst:2677 - Node <U1/q_17> of sequential type is unconnected in block <Game>.
 
@@ -544,11 +572,15 @@ Optimizing unit <vga640x480> ...
 
 Optimizing unit <GameState> ...
 
-Optimizing unit <SimpleAI> ...
-
 Optimizing unit <Select3> ...
 
 Optimizing unit <RARb_2> ...
+
+Optimizing unit <Select2> ...
+
+Optimizing unit <RARb_3> ...
+WARNING:Xst:2677 - Node <AI_sw_sync/synch_out> of sequential type is unconnected in block <Game>.
+WARNING:Xst:2677 - Node <AI_sw_sync/meta> of sequential type is unconnected in block <Game>.
 WARNING:Xst:2677 - Node <state/game_stats> of sequential type is unconnected in block <Game>.
 
 Mapping all equations...
@@ -588,15 +620,15 @@ Top Level Output File Name         : Game.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1683
+# BELS                             : 1682
 #      GND                         : 1
 #      INV                         : 4
 #      LUT1                        : 33
-#      LUT2                        : 92
+#      LUT2                        : 93
 #      LUT3                        : 119
-#      LUT4                        : 125
-#      LUT5                        : 342
-#      LUT6                        : 670
+#      LUT4                        : 123
+#      LUT5                        : 341
+#      LUT6                        : 671
 #      MUXCY                       : 132
 #      MUXF7                       : 20
 #      VCC                         : 1
@@ -623,14 +655,14 @@ Selected Device : 6slx16csg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:              65  out of  18224     0%  
- Number of Slice LUTs:                 1385  out of   9112    15%  
-    Number used as Logic:              1385  out of   9112    15%  
+ Number of Slice LUTs:                 1384  out of   9112    15%  
+    Number used as Logic:              1384  out of   9112    15%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1408
-   Number with an unused Flip Flop:    1343  out of   1408    95%  
-   Number with an unused LUT:            23  out of   1408     1%  
-   Number of fully used LUT-FF pairs:    42  out of   1408     2%  
+ Number of LUT Flip Flop pairs used:   1407
+   Number with an unused Flip Flop:    1342  out of   1407    95%  
+   Number with an unused LUT:            23  out of   1407     1%  
+   Number of fully used LUT-FF pairs:    42  out of   1407     2%  
    Number of unique control sets:        15
 
 IO Utilization: 
@@ -663,15 +695,15 @@ Clock Information:
 Clock Signal                                                   | Clock buffer(FF name)  | Load  |
 ---------------------------------------------------------------+------------------------+-------+
 clk                                                            | BUFGP                  | 56    |
-state/move_GND_12_o_AND_138_o(state/move_GND_12_o_AND_138_o1:O)| NONE(*)(state/O_pos_0) | 1     |
-state/move_GND_12_o_AND_134_o(state/move_GND_12_o_AND_134_o1:O)| NONE(*)(state/O_pos_2) | 1     |
-state/move_GND_12_o_AND_132_o(state/move_GND_12_o_AND_132_o1:O)| NONE(*)(state/O_pos_3) | 1     |
-state/move_GND_12_o_AND_136_o(state/move_GND_12_o_AND_136_o1:O)| NONE(*)(state/O_pos_1) | 1     |
-state/move_GND_12_o_AND_128_o(state/move_GND_12_o_AND_128_o1:O)| NONE(*)(state/O_pos_5) | 1     |
-state/move_GND_12_o_AND_126_o(state/move_GND_12_o_AND_126_o1:O)| NONE(*)(state/O_pos_6) | 1     |
-state/move_GND_12_o_AND_130_o(state/move_GND_12_o_AND_130_o1:O)| NONE(*)(state/O_pos_4) | 1     |
-state/move_GND_12_o_AND_122_o(state/move_GND_12_o_AND_122_o1:O)| NONE(*)(state/O_pos_8) | 1     |
-state/move_GND_12_o_AND_124_o(state/move_GND_12_o_AND_124_o1:O)| NONE(*)(state/O_pos_7) | 1     |
+state/move_GND_15_o_AND_217_o(state/move_GND_15_o_AND_217_o1:O)| NONE(*)(state/O_pos_0) | 1     |
+state/move_GND_15_o_AND_213_o(state/move_GND_15_o_AND_213_o1:O)| NONE(*)(state/O_pos_2) | 1     |
+state/move_GND_15_o_AND_211_o(state/move_GND_15_o_AND_211_o1:O)| NONE(*)(state/O_pos_3) | 1     |
+state/move_GND_15_o_AND_215_o(state/move_GND_15_o_AND_215_o1:O)| NONE(*)(state/O_pos_1) | 1     |
+state/move_GND_15_o_AND_207_o(state/move_GND_15_o_AND_207_o1:O)| NONE(*)(state/O_pos_5) | 1     |
+state/move_GND_15_o_AND_205_o(state/move_GND_15_o_AND_205_o1:O)| NONE(*)(state/O_pos_6) | 1     |
+state/move_GND_15_o_AND_209_o(state/move_GND_15_o_AND_209_o1:O)| NONE(*)(state/O_pos_4) | 1     |
+state/move_GND_15_o_AND_201_o(state/move_GND_15_o_AND_201_o1:O)| NONE(*)(state/O_pos_8) | 1     |
+state/move_GND_15_o_AND_203_o(state/move_GND_15_o_AND_203_o1:O)| NONE(*)(state/O_pos_7) | 1     |
 ---------------------------------------------------------------+------------------------+-------+
 (*) These 9 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -711,8 +743,8 @@ Delay:               3.901ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q              19   0.447   1.300  U3/vc_8 (U3/vc_8)
-     LUT4:I1->O            1   0.205   0.580  U3/Mcount_vc_val_SW0 (N9)
-     LUT4:I3->O           10   0.205   0.857  U3/Mcount_vc_val22_SW0 (N21)
+     LUT4:I1->O            1   0.205   0.580  U3/Mcount_vc_val_SW0 (N6)
+     LUT4:I3->O           10   0.205   0.857  U3/Mcount_vc_val22_SW0 (N18)
      LUT6:I5->O            1   0.205   0.000  U3/vc_0_rstpot (U3/vc_0_rstpot)
      FD:D                      0.102          U3/vc_0
     ----------------------------------------
@@ -740,7 +772,7 @@ Offset:              2.268ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 288299652 / 10
+  Total number of paths / destination ports: 281931135 / 10
 -------------------------------------------------------------------------
 Offset:              31.070ns (Levels of Logic = 27)
   Source:            U3/vc_3 (FF)
@@ -752,10 +784,10 @@ Offset:              31.070ns (Levels of Logic = 27)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q              27   0.447   1.449  U3/vc_3 (U3/vc_3)
-     LUT4:I1->O            5   0.205   0.962  U3/GND_31_o_vc[9]_AND_1192_o21 (U3/GND_31_o_vc[9]_AND_1192_o2)
-     LUT5:I1->O            8   0.203   1.147  U3/Msub_GND_31_o_GND_31_o_sub_305_OUT_cy<7>11 (U3/Msub_GND_31_o_GND_31_o_sub_305_OUT_cy<7>)
-     LUT5:I0->O            3   0.203   0.995  U3/Msub_GND_31_o_GND_31_o_sub_306_OUT_xor<9>11 (U3/GND_31_o_GND_31_o_sub_306_OUT<9>)
-     LUT5:I0->O            1   0.203   0.579  U3/Msub_GND_31_o_GND_31_o_sub_308_OUT_xor<9>11 (U3/GND_31_o_GND_31_o_sub_308_OUT<9>)
+     LUT4:I1->O            5   0.205   0.962  U3/GND_34_o_vc[9]_AND_1271_o21 (U3/GND_34_o_vc[9]_AND_1271_o2)
+     LUT5:I1->O            8   0.203   1.147  U3/Msub_GND_34_o_GND_34_o_sub_305_OUT_cy<7>11 (U3/Msub_GND_34_o_GND_34_o_sub_305_OUT_cy<7>)
+     LUT5:I0->O            3   0.203   0.995  U3/Msub_GND_34_o_GND_34_o_sub_306_OUT_xor<9>11 (U3/GND_34_o_GND_34_o_sub_306_OUT<9>)
+     LUT5:I0->O            1   0.203   0.579  U3/Msub_GND_34_o_GND_34_o_sub_308_OUT_xor<9>11 (U3/GND_34_o_GND_34_o_sub_308_OUT<9>)
      DSP48A1:B9->M0        3   3.364   0.651  U3/Mmult_n0324 (U3/n0324<0>)
      LUT2:I1->O            1   0.205   0.000  U3/Madd_n0304_Madd_lut<0> (U3/Madd_n0304_Madd_lut<0>)
      MUXCY:S->O            1   0.172   0.000  U3/Madd_n0304_Madd_cy<0> (U3/Madd_n0304_Madd_cy<0>)
@@ -763,18 +795,18 @@ Offset:              31.070ns (Levels of Logic = 27)
      MUXCY:CI->O           1   0.019   0.000  U3/Madd_n0304_Madd_cy<2> (U3/Madd_n0304_Madd_cy<2>)
      MUXCY:CI->O           1   0.019   0.000  U3/Madd_n0304_Madd_cy<3> (U3/Madd_n0304_Madd_cy<3>)
      XORCY:CI->O          57   0.180   1.938  U3/Madd_n0304_Madd_xor<4> (U3/n0304<4>)
-     LUT6:I1->O           10   0.203   1.104  U3_Mram__n12714611 (U3_Mram__n1271461)
+     LUT6:I1->O           10   0.203   1.104  U3_Mram__n16811611 (U3_Mram__n1681161)
      LUT6:I2->O            2   0.203   0.961  U3_SF24261 (U3_SF2426)
      LUT6:I1->O            2   0.203   0.845  U3_SF24406 (U3_SF24406)
-     LUT6:I3->O            1   0.205   0.944  U3_Mram__n12714671580_SW1 (U3_N520)
-     LUT6:I0->O            1   0.203   0.944  U3_Mram__n12714671580 (U3_Mram__n12714671579)
-     LUT6:I0->O            1   0.203   0.924  U3_Mram__n12714671583_SW0 (U3_N390)
-     LUT6:I1->O            1   0.203   0.684  U3_Mram__n12714671583 (U3_Mram__n12714671582)
-     LUT6:I4->O            1   0.203   0.827  U3_Mram__n12714671584 (U3_Mram__n12714671583)
-     LUT6:I2->O            1   0.203   0.580  U3_Mram__n12714671585 (U3/_n12714<0>)
+     LUT6:I3->O            1   0.205   0.944  U3_Mram__n16811671580_SW1 (U3_N520)
+     LUT6:I0->O            1   0.203   0.944  U3_Mram__n16811671580 (U3_Mram__n16811671579)
+     LUT6:I0->O            1   0.203   0.924  U3_Mram__n16811671583_SW0 (U3_N390)
+     LUT6:I1->O            1   0.203   0.684  U3_Mram__n16811671583 (U3_Mram__n16811671582)
+     LUT6:I4->O            1   0.203   0.827  U3_Mram__n16811671584 (U3_Mram__n16811671583)
+     LUT6:I2->O            1   0.203   0.580  U3_Mram__n16811671585 (U3/_n16811<0>)
      LUT2:I1->O            2   0.205   0.617  U3/blue<1>211 (U3/blue<1>21)
-     LUT6:I5->O            1   0.205   0.808  U3/GND_31_o_GND_31_o_AND_1196_o114_SW0 (N59)
-     LUT6:I3->O            3   0.205   0.898  U3/GND_31_o_GND_31_o_AND_1196_o114 (U3/GND_31_o_GND_31_o_AND_1196_o_mmx_out)
+     LUT6:I5->O            1   0.205   0.808  U3/GND_34_o_GND_34_o_AND_1275_o114_SW0 (N56)
+     LUT6:I3->O            3   0.205   0.898  U3/GND_34_o_GND_34_o_AND_1275_o114 (U3/GND_34_o_GND_34_o_AND_1275_o_mmx_out)
      LUT6:I2->O            1   0.203   0.924  U3/Mmux_green131 (U3/Mmux_green131)
      LUT6:I1->O            2   0.203   0.845  U3/Mmux_green132 (U3/Mmux_green13)
      LUT4:I1->O            1   0.205   0.579  U3/Mmux_green11 (green_0_OBUF)
@@ -784,13 +816,13 @@ Offset:              31.070ns (Levels of Logic = 27)
                                        (35.0% logic, 65.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_12_o_AND_128_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_15_o_AND_207_o'
   Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
 Offset:              6.550ns (Levels of Logic = 4)
   Source:            state/O_pos_5 (LATCH)
   Destination:       red<1> (PAD)
-  Source Clock:      state/move_GND_12_o_AND_128_o falling
+  Source Clock:      state/move_GND_15_o_AND_207_o falling
 
   Data Path: state/O_pos_5 to red<1>
                                 Gate     Net
@@ -806,21 +838,21 @@ Offset:              6.550ns (Levels of Logic = 4)
                                        (56.2% logic, 43.8% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_12_o_AND_122_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_15_o_AND_201_o'
   Total number of paths / destination ports: 6 / 6
 -------------------------------------------------------------------------
 Offset:              8.989ns (Levels of Logic = 6)
   Source:            state/O_pos_8 (LATCH)
   Destination:       green<0> (PAD)
-  Source Clock:      state/move_GND_12_o_AND_122_o falling
+  Source Clock:      state/move_GND_15_o_AND_201_o falling
 
   Data Path: state/O_pos_8 to green<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              2   0.498   0.845  state/O_pos_8 (state/O_pos_8)
-     LUT6:I3->O            1   0.205   0.808  U3/GND_31_o_GND_31_o_AND_1196_o114_SW0 (N59)
-     LUT6:I3->O            3   0.205   0.898  U3/GND_31_o_GND_31_o_AND_1196_o114 (U3/GND_31_o_GND_31_o_AND_1196_o_mmx_out)
+     LUT6:I3->O            1   0.205   0.808  U3/GND_34_o_GND_34_o_AND_1275_o114_SW0 (N56)
+     LUT6:I3->O            3   0.205   0.898  U3/GND_34_o_GND_34_o_AND_1275_o114 (U3/GND_34_o_GND_34_o_AND_1275_o_mmx_out)
      LUT6:I2->O            1   0.203   0.924  U3/Mmux_green131 (U3/Mmux_green131)
      LUT6:I1->O            2   0.203   0.845  U3/Mmux_green132 (U3/Mmux_green13)
      LUT4:I1->O            1   0.205   0.579  U3/Mmux_green11 (green_0_OBUF)
@@ -830,13 +862,13 @@ Offset:              8.989ns (Levels of Logic = 6)
                                        (45.5% logic, 54.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_12_o_AND_124_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_15_o_AND_203_o'
   Total number of paths / destination ports: 7 / 7
 -------------------------------------------------------------------------
 Offset:              9.686ns (Levels of Logic = 7)
   Source:            state/O_pos_7 (LATCH)
   Destination:       green<0> (PAD)
-  Source Clock:      state/move_GND_12_o_AND_124_o falling
+  Source Clock:      state/move_GND_15_o_AND_203_o falling
 
   Data Path: state/O_pos_7 to green<0>
                                 Gate     Net
@@ -844,8 +876,8 @@ Offset:              9.686ns (Levels of Logic = 7)
     ----------------------------------------  ------------
      LDC:G->Q              2   0.498   0.721  state/O_pos_7 (state/O_pos_7)
      LUT2:I0->O            2   0.203   0.617  U3/blue<1>211 (U3/blue<1>21)
-     LUT6:I5->O            1   0.205   0.808  U3/GND_31_o_GND_31_o_AND_1196_o114_SW0 (N59)
-     LUT6:I3->O            3   0.205   0.898  U3/GND_31_o_GND_31_o_AND_1196_o114 (U3/GND_31_o_GND_31_o_AND_1196_o_mmx_out)
+     LUT6:I5->O            1   0.205   0.808  U3/GND_34_o_GND_34_o_AND_1275_o114_SW0 (N56)
+     LUT6:I3->O            3   0.205   0.898  U3/GND_34_o_GND_34_o_AND_1275_o114 (U3/GND_34_o_GND_34_o_AND_1275_o_mmx_out)
      LUT6:I2->O            1   0.203   0.924  U3/Mmux_green131 (U3/Mmux_green131)
      LUT6:I1->O            2   0.203   0.845  U3/Mmux_green132 (U3/Mmux_green13)
      LUT4:I1->O            1   0.205   0.579  U3/Mmux_green11 (green_0_OBUF)
@@ -855,20 +887,20 @@ Offset:              9.686ns (Levels of Logic = 7)
                                        (44.3% logic, 55.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_12_o_AND_126_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_15_o_AND_205_o'
   Total number of paths / destination ports: 7 / 7
 -------------------------------------------------------------------------
 Offset:              7.884ns (Levels of Logic = 5)
   Source:            state/O_pos_6 (LATCH)
   Destination:       green<0> (PAD)
-  Source Clock:      state/move_GND_12_o_AND_126_o falling
+  Source Clock:      state/move_GND_15_o_AND_205_o falling
 
   Data Path: state/O_pos_6 to green<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              3   0.498   0.755  state/O_pos_6 (state/O_pos_6)
-     LUT6:I4->O            3   0.203   0.898  U3/GND_31_o_GND_31_o_AND_1196_o114 (U3/GND_31_o_GND_31_o_AND_1196_o_mmx_out)
+     LUT6:I4->O            3   0.203   0.898  U3/GND_34_o_GND_34_o_AND_1275_o114 (U3/GND_34_o_GND_34_o_AND_1275_o_mmx_out)
      LUT6:I2->O            1   0.203   0.924  U3/Mmux_green131 (U3/Mmux_green131)
      LUT6:I1->O            2   0.203   0.845  U3/Mmux_green132 (U3/Mmux_green13)
      LUT4:I1->O            1   0.205   0.579  U3/Mmux_green11 (green_0_OBUF)
@@ -878,13 +910,13 @@ Offset:              7.884ns (Levels of Logic = 5)
                                        (49.2% logic, 50.8% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_12_o_AND_134_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_15_o_AND_213_o'
   Total number of paths / destination ports: 6 / 6
 -------------------------------------------------------------------------
 Offset:              6.656ns (Levels of Logic = 4)
   Source:            state/O_pos_2 (LATCH)
   Destination:       green<0> (PAD)
-  Source Clock:      state/move_GND_12_o_AND_134_o falling
+  Source Clock:      state/move_GND_15_o_AND_213_o falling
 
   Data Path: state/O_pos_2 to green<0>
                                 Gate     Net
@@ -900,13 +932,13 @@ Offset:              6.656ns (Levels of Logic = 4)
                                        (55.3% logic, 44.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_12_o_AND_136_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_15_o_AND_215_o'
   Total number of paths / destination ports: 5 / 5
 -------------------------------------------------------------------------
 Offset:              5.832ns (Levels of Logic = 3)
   Source:            state/O_pos_1 (LATCH)
   Destination:       blue<1> (PAD)
-  Source Clock:      state/move_GND_12_o_AND_136_o falling
+  Source Clock:      state/move_GND_15_o_AND_215_o falling
 
   Data Path: state/O_pos_1 to blue<1>
                                 Gate     Net
@@ -921,13 +953,13 @@ Offset:              5.832ns (Levels of Logic = 3)
                                        (59.6% logic, 40.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_12_o_AND_130_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_15_o_AND_209_o'
   Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
 Offset:              7.568ns (Levels of Logic = 5)
   Source:            state/O_pos_4 (LATCH)
   Destination:       green<0> (PAD)
-  Source Clock:      state/move_GND_12_o_AND_130_o falling
+  Source Clock:      state/move_GND_15_o_AND_209_o falling
 
   Data Path: state/O_pos_4 to green<0>
                                 Gate     Net
@@ -944,13 +976,13 @@ Offset:              7.568ns (Levels of Logic = 5)
                                        (51.3% logic, 48.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_12_o_AND_138_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_15_o_AND_217_o'
   Total number of paths / destination ports: 5 / 5
 -------------------------------------------------------------------------
 Offset:              6.479ns (Levels of Logic = 4)
   Source:            state/O_pos_0 (LATCH)
   Destination:       green<0> (PAD)
-  Source Clock:      state/move_GND_12_o_AND_138_o falling
+  Source Clock:      state/move_GND_15_o_AND_217_o falling
 
   Data Path: state/O_pos_0 to green<0>
                                 Gate     Net
@@ -966,20 +998,20 @@ Offset:              6.479ns (Levels of Logic = 4)
                                        (56.8% logic, 43.2% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_12_o_AND_132_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_15_o_AND_211_o'
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
 Offset:              5.677ns (Levels of Logic = 4)
   Source:            state/O_pos_3 (LATCH)
   Destination:       blue<1> (PAD)
-  Source Clock:      state/move_GND_12_o_AND_132_o falling
+  Source Clock:      state/move_GND_15_o_AND_211_o falling
 
   Data Path: state/O_pos_3 to blue<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              2   0.498   0.617  state/O_pos_3 (state/O_pos_3)
-     LUT5:I4->O            1   0.205   0.000  U3/blue<1>4_G (N64)
+     LUT5:I4->O            1   0.205   0.000  U3/blue<1>4_G (N61)
      MUXF7:I1->O           1   0.140   0.827  U3/blue<1>4 (U3/blue<1>4)
      LUT6:I2->O            2   0.203   0.616  U3/blue<1>5 (blue_0_OBUF)
      OBUF:I->O                 2.571          blue_1_OBUF (blue<1>)
@@ -1000,7 +1032,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |    3.901|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock state/move_GND_12_o_AND_122_o
+Clock to Setup on destination clock state/move_GND_15_o_AND_201_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1008,7 +1040,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    1.948|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock state/move_GND_12_o_AND_124_o
+Clock to Setup on destination clock state/move_GND_15_o_AND_203_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1016,7 +1048,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    1.948|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock state/move_GND_12_o_AND_126_o
+Clock to Setup on destination clock state/move_GND_15_o_AND_205_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1024,7 +1056,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    1.948|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock state/move_GND_12_o_AND_128_o
+Clock to Setup on destination clock state/move_GND_15_o_AND_207_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1032,7 +1064,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    1.948|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock state/move_GND_12_o_AND_130_o
+Clock to Setup on destination clock state/move_GND_15_o_AND_209_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1040,7 +1072,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    1.948|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock state/move_GND_12_o_AND_132_o
+Clock to Setup on destination clock state/move_GND_15_o_AND_211_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1048,7 +1080,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    1.948|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock state/move_GND_12_o_AND_134_o
+Clock to Setup on destination clock state/move_GND_15_o_AND_213_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1056,7 +1088,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    1.948|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock state/move_GND_12_o_AND_136_o
+Clock to Setup on destination clock state/move_GND_15_o_AND_215_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1064,7 +1096,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    1.948|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock state/move_GND_12_o_AND_138_o
+Clock to Setup on destination clock state/move_GND_15_o_AND_217_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1075,14 +1107,14 @@ clk            |         |         |    1.948|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 137.00 secs
-Total CPU time to Xst completion: 137.35 secs
+Total REAL time to Xst completion: 135.00 secs
+Total CPU time to Xst completion: 135.51 secs
  
 --> 
 
-Total memory usage is 325620 kilobytes
+Total memory usage is 325900 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   31 (   0 filtered)
-Number of infos    :   11 (   0 filtered)
+Number of warnings :   33 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
 

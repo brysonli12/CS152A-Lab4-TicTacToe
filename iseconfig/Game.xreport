@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-03-10T14:51:29</DateModified>
+  <DateModified>2017-03-10T15:27:59</DateModified>
   <ModuleName>Game</ModuleName>
-  <SummaryTimeStamp>2017-03-09T16:57:53</SummaryTimeStamp>
+  <SummaryTimeStamp>2017-03-10T15:13:30</SummaryTimeStamp>
   <SavedFilePath>C:/Users/User/Documents/GitHub/CS152A-Lab4-TicTacToe/iseconfig/Game.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/User/Documents/GitHub/CS152A-Lab4-TicTacToe\</ImplementationReportsDirectory>
   <DateInitialized>2017-03-09T09:55:22</DateInitialized>

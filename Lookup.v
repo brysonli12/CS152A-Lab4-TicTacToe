@@ -5,7 +5,8 @@ module LookupTable (
 	output wire [8:0] AIMove 
 	);
 
-    wire [8:0] move, empty;
+    reg [8:0] move;
+	 wire  [8:0] empty;
 
 
 
@@ -13,7 +14,7 @@ module LookupTable (
     always @(*)
     begin
         case(X_state)
-            9'b000000000: move = 9'b100000000; // Game Start
+            9'b000000000:  move = 9'b100000000; // Game Start
             9'b100000000: // X ONLY in top left corner
                 case(O_state)
                     9'b000000001: move = 9'b001000000;
