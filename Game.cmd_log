@@ -1,5 +1,4 @@
-xst -intstyle ise -ifn "C:/Users/User/Documents/GitHub/CS152A-Lab4-TicTacToe/Game.xst" -ofn "C:/Users/User/Documents/GitHub/CS152A-Lab4-TicTacToe/Game.syr" 
-xst -intstyle ise -ifn "C:/Users/User/Documents/GitHub/CS152A-Lab4-TicTacToe/Game.xst" -ofn "C:/Users/User/Documents/GitHub/CS152A-Lab4-TicTacToe/Game.syr" 
+xst -intstyle ise -ifn "C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game.xst" -ofn "C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game.syr" 
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 Game.ngc Game.ngd  
 map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Game_map.ncd Game.ngd Game.pcf 
 par -w -intstyle ise -ol high -mt off Game_map.ncd Game.ncd Game.pcf 

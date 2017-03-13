@@ -47,7 +47,6 @@ always @(posedge clk or posedge clr) begin
 		{rst_vga,rst_ff} <= 2'b11;
 	end
 	else begin
-			//if(AI_move) begin end // TEMPORARY
 		{rst_vga,rst_ff} <= {rst_ff,1'b0};
 	end
 end
@@ -62,7 +61,7 @@ clockdiv U1(
 	);
 
 wire move; // Player indicates they want to make a move - debounced btnInput rising edge
-wire player;
+reg player = 0;
 reg [3:0] nextMove;
 
 

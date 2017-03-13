@@ -3,7 +3,7 @@ module LookupTableAI (
     input [8:0] X_state,
 	input [8:0] O_state,
 	output wire [8:0] AIMove 
-)
+);
     wire [8:0] rotation1, rotation2, rotation3, rotation4, empty;
 
     LookupTable rot1 (X_state, O_state, rotation1);

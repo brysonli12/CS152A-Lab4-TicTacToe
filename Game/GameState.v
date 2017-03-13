@@ -88,11 +88,12 @@ module GameState (
 						
 				
 			end
-			else // X move
+			
+		end
+		else // X move
 			begin // easy if AI Switch is false, else, use hard move
 				X_pos = ((X_pos | AIMove) & ~AISwitch)| ((X_pos | AIMove_Hard) & AISwitch);
 			end
-		end
 	end
 	
 	always @ (posedge clk or posedge rst)

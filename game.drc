@@ -1,45 +1,51 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Fri Mar 10 21:38:55 2017
+Mon Mar 13 01:46:26 2017
 
 drc -z Game.ncd Game.pcf
 
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   state/move_GND_15_o_AND_215_o is sourced by a combinatorial pin. This is not
+   state/move_GND_22_o_AND_202_o is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net move is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   state/move_GND_22_o_AND_194_o is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   state/move_GND_15_o_AND_201_o is sourced by a combinatorial pin. This is not
+   state/move_GND_22_o_AND_190_o is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   state/move_GND_15_o_AND_203_o is sourced by a combinatorial pin. This is not
+   state/move_GND_22_o_AND_186_o is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   state/move_GND_15_o_AND_205_o is sourced by a combinatorial pin. This is not
+   state/move_GND_22_o_AND_188_o is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net hard_ai/_n0158 is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   state/move_GND_22_o_AND_192_o is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   state/move_GND_15_o_AND_213_o is sourced by a combinatorial pin. This is not
+   state/move_GND_22_o_AND_198_o is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   state/move_GND_15_o_AND_207_o is sourced by a combinatorial pin. This is not
+   state/move_GND_22_o_AND_200_o is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   state/move_GND_15_o_AND_217_o is sourced by a combinatorial pin. This is not
+   state/move_GND_22_o_AND_196_o is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   state/move_GND_15_o_AND_211_o is sourced by a combinatorial pin. This is not
-   good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   state/move_GND_15_o_AND_209_o is sourced by a combinatorial pin. This is not
-   good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-DRC detected 0 errors and 9 warnings.  Please see the previously displayed
+DRC detected 0 errors and 11 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
