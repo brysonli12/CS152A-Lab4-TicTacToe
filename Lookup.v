@@ -8,11 +8,14 @@ module LookupTableAI (
 
     LookupTable rot1 (X_state, O_state, rotation1);
     LookupTable rot2 ({X_state[6], X_state[3], X_state[0], X_state[7], X_state[4], X_state[1], X_state[8], X_state[5], X_state[2]}, 
-                      {O_state[6], O_state[3], O_state[0], O_state[7], O_state[4], O_state[1], O_state[8], O_state[5], O_state[2]}, rotation2);
+                      {O_state[6], O_state[3], O_state[0], O_state[7], O_state[4], O_state[1], O_state[8], O_state[5], O_state[2]}, 
+                      .AIMove({rotation2[6], rotation2[3], rotation2[0], rotation2[7], rotation2[4], rotation2[1], rotation2[8], rotation2[5], rotation2[2]}));
     LookupTable rot3 ({X_state[2], X_state[5], X_state[8], X_state[1], X_state[4], X_state[7], X_state[0], X_state[3], X_state[6]}, 
-                      {O_state[2], O_state[5], O_state[8], O_state[1], O_state[4], O_state[7], O_state[0], O_state[3], O_state[6]}, rotation3);
+                      {O_state[2], O_state[5], O_state[8], O_state[1], O_state[4], O_state[7], O_state[0], O_state[3], O_state[6]}, 
+                      .AIMove({rotation3[2], rotation3[5], rotation3[8], rotation3[1], rotation3[4], rotation3[7], rotation3[0], rotation3[3], rotation3[6]}));
     LookupTable rot4 ({X_state[0], X_state[1], X_state[2], X_state[3], X_state[4], X_state[5], X_state[6], X_state[7], X_state[8]}, 
-                      {O_state[0], O_state[1], O_state[2], O_state[3], O_state[4], O_state[5], O_state[6], O_state[7], O_state[8]}, rotation4);
+                      {O_state[0], O_state[1], O_state[2], O_state[3], O_state[4], O_state[5], O_state[6], O_state[7], O_state[8]}, 
+                      .AIMove({rotation4[0], rotation4[1], rotation4[2], rotation4[3], rotation4[4], rotation4[5], rotation4[6], rotation4[7], rotation4[8]}));
 
     Empty emptyx (~(X_state | O_state), empty); 
 
