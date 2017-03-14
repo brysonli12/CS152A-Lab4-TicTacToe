@@ -74,6 +74,7 @@ module GameState (
 
 					4: // tile 4, O
 						if(X_pos[4] | O_pos[4] != 1) // if no move made yet
+						begin
 							tmp_O_pos = O_pos | 9'b000010000;
 							tmp_player = ~player;
 						end
