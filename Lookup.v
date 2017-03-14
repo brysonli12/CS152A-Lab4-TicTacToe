@@ -16,7 +16,7 @@ module LookupTableAI (
 
     Empty emptyx (~(X_state | O_state), empty); 
 
-    Select5 pick(rotation1, rotation2, rotation3, rotation4, empty);
+    Select5 pick(rotation1, rotation2, rotation3, rotation4, empty, AIMove);
 endmodule
 
 

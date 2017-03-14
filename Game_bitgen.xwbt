@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe\Game.ncd
-OUTFILE=C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe\Game.bit
+INFILE=C:\Users\152\Desktop\CS152A-Lab4-TicTacToe\Game.ncd
+OUTFILE=C:\Users\152\Desktop\CS152A-Lab4-TicTacToe\Game.bit
 FAMILY=Spartan6
 PART=xc6slx16-3csg324
-WORKINGDIR=C:\Users\Isaac\Documents\GitHub\CS152A-Lab4-TicTacToe
-LICENSE=WebPack
-USER_INFO=211289946_0_0_139
+WORKINGDIR=C:\Users\152\Desktop\CS152A-Lab4-TicTacToe
+LICENSE=ISE
+USER_INFO=203015155_203016297_210565169_105

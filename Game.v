@@ -59,12 +59,6 @@ clockdiv U1(
 	.logic_en_1(logic_en_delay),
 	.pix_en(pix_en)
 	);
-
-wire move; // Player indicates they want to make a move - debounced btnInput rising edge
-reg player = 0;
-reg [3:0] nextMove;
-
-
 /* DEBOUCNING INPUT */
 
 	
@@ -124,6 +118,10 @@ reg [3:0] nextMove;
 		.synch_out(switch4)
 	);
 	
+	
+	
+	wire move; // Player indicates they want to make a move - debounced btnInput rising edge
+	
 	Debouncer deb_S(
 		.clk(clk),
 		.clk2(logic_en),
@@ -131,24 +129,32 @@ reg [3:0] nextMove;
 		.debounced_btn_input(move)
 	);
 	
+	
+	reg [3:0] nextMove;
+
+
 	always @(*)
 	begin	nextMove = {switch4, switch3, switch2, switch1};
 	end
 
 
-wire [8:0] X_state;
-wire [8:0] O_state;
-wire [2:0] GameStatus;
-wire [8:0] AIMove;
-wire [8:0] AIMove_hard;
+	wire [8:0] X_state;
+	wire [8:0] O_state;
+	wire [2:0] GameStatus;
+	wire [8:0] AIMove;
+	wire [8:0] AIMove_hard;
 
+//
+//
+//	wire player;
+	
 SimpleAI sa(
 	.X_state(X_state),
 	.O_state(O_state),
 	.AIMove(AIMove)
 	);
 	
-LookupTable hard_ai(
+LookupTableAI hard_ai(
 	.X_state(X_state),
 	.O_state(O_state),
 	.AIMove(AIMove_hard)
@@ -159,12 +165,13 @@ GameState state(
 	.move(move),
 	.clk(logic_en_delay),
 	
-	.player(player),
 	.nextMove(nextMove),
 	.AISwitch(AI_switch),
 	.AIMove(AIMove),
 	.AIMove_Hard(AIMove_hard),
 	
+	
+//	.player(player),
 	.X_state(X_state),
 	.O_state(O_state),
 	.GameStatus(GameStatus)

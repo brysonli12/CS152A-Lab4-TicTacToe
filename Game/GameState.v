@@ -5,11 +5,11 @@ module GameState (
 	input move ,// indicate that you want to make a move
 	input clk,
 	
-	input player, // 1 for X, 0 for O
 	input [3:0] nextMove, // 4 digits, decides on location to try to make a move,
 	input AISwitch,
 	input [8:0] AIMove,
 	input [8:0] AIMove_Hard,
+//	output wire player, // 1 for X, 0 for O
 	output wire [8:0] X_state,
 	output wire [8:0] O_state,
 	output wire [2:0] GameStatus 
@@ -24,8 +24,8 @@ module GameState (
 
 	reg [8:0] X_pos;
 	reg [8:0] O_pos;
-	reg game_stats = 0;
-
+	reg [2:0] game_stats = 0;
+	reg player;
 		
 	// MAKE A MOVE
 	// Tile Blocks
@@ -85,12 +85,11 @@ module GameState (
 					//(taken care of in game status below)
 					;
 				endcase
-						
 				
 			end
 			
 		end
-		else // X move
+		else if(player == 1) // X move
 			begin // easy if AI Switch is false, else, use hard move
 				X_pos = ((X_pos | AIMove) & ~AISwitch)| ((X_pos | AIMove_Hard) & AISwitch);
 			end
@@ -100,13 +99,17 @@ module GameState (
 	begin
 		if (rst) begin
 			game_stats <= 0; // game status
+			player <= 1;
 		end
 		else begin
 			if (move) begin
 				// UPDATE game state!
 				case(nextMove)
 					0,1,2,3,4,5,6,7,8: 
+					begin
 						game_stats <= 0;
+						player <= ~player;
+					end
 					default: // wrong move, do nothing
 						game_stats <= 4;
 				endcase
@@ -124,7 +127,10 @@ module GameState (
 				// CHECK WIN for X
 				case(nextMove)
 					0,1,2,3,4,5,6,7,8: // X
+					begin
 						game_stats <= 0;
+						player <= ~player;
+					end
 					default: // wrong move, do nothing
 						game_stats <= 4;
 				endcase
