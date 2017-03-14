@@ -46,39 +46,65 @@ module GameState (
 				case(nextMove)
 					0: // tile 0, O
 						if(X_pos[8] | O_pos[8] != 1) // if no move made yet
+						begin
 							tmp_O_pos = O_pos | 9'b100000000;
+							tmp_player = ~player;
+						end
 
 					1: // tile 1, O
 						if(X_pos[7] | O_pos[7] != 1) // if no move made yet
+						begin
 							tmp_O_pos = O_pos | 9'b010000000;
+							tmp_player = ~player;
+						end
 
 					2: // tile 2, O
 						if(X_pos[6] | O_pos[6] != 1) // if no move made yet
+						begin
 							tmp_O_pos = O_pos | 9'b001000000;
+							tmp_player = ~player;
+						end
 
 					3: // tile 3, O
 						if(X_pos[5] | O_pos[5] != 1) // if no move made yet
+						begin
 							tmp_O_pos = O_pos | 9'b000100000;
+							tmp_player = ~player;
+						end
 
 					4: // tile 4, O
 						if(X_pos[4] | O_pos[4] != 1) // if no move made yet
 							tmp_O_pos = O_pos | 9'b000010000;
+							tmp_player = ~player;
+						end
 
 					5: // tile 5, O
 						if(X_pos[3] | O_pos[3] != 1) // if no move made yet
+						begin
 							tmp_O_pos = O_pos | 9'b000001000;
+							tmp_player = ~player;
+						end
 
 					6: // tile 6, O
 						if(X_pos[2] | O_pos[2] != 1) // if no move made yet
+						begin
 							tmp_O_pos = O_pos | 9'b000000100;
+							tmp_player = ~player;
+						end
 
 					7: // tile 7, O
 						if(X_pos[1] | O_pos[1] != 1) // if no move made yet
+						begin
 							tmp_O_pos = O_pos | 9'b000000010;
+							tmp_player = ~player;
+						end
 
 					8: // tile 8, O
 						if(X_pos[0] | O_pos[0] != 1) // if no move made yet
+						begin
 							tmp_O_pos = O_pos | 9'b000000001;
+							tmp_player = ~player;
+						end
 
 					default: // wrong move, do nothing 
 					//(taken care of in game status below)
@@ -107,7 +133,7 @@ module GameState (
 	begin
 		if (rst) begin
 			game_stats <= 0; // game status
-			player <= 0;
+			player <= 1; // initial player is AI
 			X_pos <= 9'b000000000;
 			O_pos <= 9'b000000000;
 		end
@@ -115,7 +141,7 @@ module GameState (
 			player <= tmp_player;
 			X_pos <= tmp_X_pos;
 			O_pos <= tmp_O_pos;
-			if (move) begin
+			if (move) begin // player moved
 				// UPDATE game state!
 				case(nextMove)
 					0,1,2,3,4,5,6,7,8: 
@@ -135,10 +161,10 @@ module GameState (
 				else if((O_pos | X_pos) == 9'b111_111_111)
 						game_stats <= 3;
 			end
-			else  begin
+			else  begin // AI moved
 				// CHECK WIN for X
 				game_stats <= 0;
-			end
+			
 							
 				// Check if X won
 				// If not, and xoring two positions together creates 111111111, then there is draw
@@ -148,6 +174,7 @@ module GameState (
 					game_stats <= 1;
 				else if((O_pos | X_pos) == 9'b111_111_111)
 					game_stats <= 3;
+			end
 		end
 	end
 	
