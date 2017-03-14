@@ -23,9 +23,12 @@ module GameState (
 	);
 
 	reg [8:0] X_pos;
+	reg [8:0] tmp_X_pos;
 	reg [8:0] O_pos;
+	reg [8:0] tmp_O_pos = 9'b000000000;
 	reg [2:0] game_stats = 0;
 	reg player;
+	reg tmp_player;
 		
 	// MAKE A MOVE
 	// Tile Blocks
@@ -34,11 +37,7 @@ module GameState (
 	// 6 | 7 | 8
 	always @(*)
 	begin
-		if(rst) begin
-			X_pos = 0;
-			O_pos = 0;
-		end
-		else if(move)
+	if(move)
 		// if current board is valid AND you want to make a move (input from user!)
 		// by default the board would be valid, but this is just a check
 		begin
@@ -47,39 +46,39 @@ module GameState (
 				case(nextMove)
 					0: // tile 0, O
 						if(X_pos[8] | O_pos[8] != 1) // if no move made yet
-							O_pos[8] = 1;
+							tmp_O_pos = O_pos | 9'b100000000;
 
 					1: // tile 1, O
 						if(X_pos[7] | O_pos[7] != 1) // if no move made yet
-							O_pos[7] = 1;
+							tmp_O_pos = O_pos | 9'b010000000;
 
 					2: // tile 2, O
 						if(X_pos[6] | O_pos[6] != 1) // if no move made yet
-							O_pos[6] = 1;
+							tmp_O_pos = O_pos | 9'b001000000;
 
 					3: // tile 3, O
 						if(X_pos[5] | O_pos[5] != 1) // if no move made yet
-							O_pos[5] = 1;
+							tmp_O_pos = O_pos | 9'b000100000;
 
 					4: // tile 4, O
 						if(X_pos[4] | O_pos[4] != 1) // if no move made yet
-							O_pos[4] = 1;
+							tmp_O_pos = O_pos | 9'b000010000;
 
 					5: // tile 5, O
 						if(X_pos[3] | O_pos[3] != 1) // if no move made yet
-							O_pos[3] = 1;
+							tmp_O_pos = O_pos | 9'b000001000;
 
 					6: // tile 6, O
 						if(X_pos[2] | O_pos[2] != 1) // if no move made yet
-							O_pos[2] = 1;
+							tmp_O_pos = O_pos | 9'b000000100;
 
 					7: // tile 7, O
 						if(X_pos[1] | O_pos[1] != 1) // if no move made yet
-							O_pos[1] = 1;
+							tmp_O_pos = O_pos | 9'b000000010;
 
 					8: // tile 8, O
 						if(X_pos[0] | O_pos[0] != 1) // if no move made yet
-							O_pos[0] = 1;
+							tmp_O_pos = O_pos | 9'b000000001;
 
 					default: // wrong move, do nothing 
 					//(taken care of in game status below)
@@ -89,9 +88,18 @@ module GameState (
 			end
 			
 		end
-		else if(player == 1) // X move
+		else if(player == 1 && move == 0 ) // X move
 			begin // easy if AI Switch is false, else, use hard move
-				X_pos = ((X_pos | AIMove) & ~AISwitch)| ((X_pos | AIMove_Hard) & AISwitch);
+				if(AISwitch == 1'b0) begin
+					tmp_X_pos = X_pos | AIMove;
+					tmp_player = ~player;
+				end
+				else begin
+					tmp_X_pos = X_pos | AIMove_Hard;
+					tmp_player = ~player;
+				end
+				
+//				X_pos = AISwitch ? X_pos | AIMove_Hard: X_pos | AIMove;
 			end
 	end
 	
@@ -99,16 +107,20 @@ module GameState (
 	begin
 		if (rst) begin
 			game_stats <= 0; // game status
-			player <= 1;
+			player <= 0;
+			X_pos <= 9'b000000000;
+			O_pos <= 9'b000000000;
 		end
 		else begin
+			player <= tmp_player;
+			X_pos <= tmp_X_pos;
+			O_pos <= tmp_O_pos;
 			if (move) begin
 				// UPDATE game state!
 				case(nextMove)
 					0,1,2,3,4,5,6,7,8: 
 					begin
 						game_stats <= 0;
-						player <= ~player;
 					end
 					default: // wrong move, do nothing
 						game_stats <= 4;
@@ -123,17 +135,10 @@ module GameState (
 				else if((O_pos | X_pos) == 9'b111_111_111)
 						game_stats <= 3;
 			end
-			else begin
+			else  begin
 				// CHECK WIN for X
-				case(nextMove)
-					0,1,2,3,4,5,6,7,8: // X
-					begin
-						game_stats <= 0;
-						player <= ~player;
-					end
-					default: // wrong move, do nothing
-						game_stats <= 4;
-				endcase
+				game_stats <= 0;
+			end
 							
 				// Check if X won
 				// If not, and xoring two positions together creates 111111111, then there is draw
@@ -143,7 +148,6 @@ module GameState (
 					game_stats <= 1;
 				else if((O_pos | X_pos) == 9'b111_111_111)
 					game_stats <= 3;
-			end
 		end
 	end
 	

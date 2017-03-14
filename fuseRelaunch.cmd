@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game_TB_isim_beh.exe" -prj "C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game_TB_beh.prj" "work.Game_TB" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/GameState_TB_isim_beh.exe" -prj "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/GameState_TB_beh.prj" "work.GameState_TB" "work.glbl" 

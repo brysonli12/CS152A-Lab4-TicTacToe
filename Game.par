@@ -1,7 +1,7 @@
 Release 14.6 par P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-CS152A-03::  Tue Mar 14 10:22:20 2017
+CS152A-03::  Tue Mar 14 11:46:23 2017
 
 par -w -intstyle ise -ol high -mt off Game_map.ncd Game.ncd Game.pcf 
 
@@ -27,16 +27,16 @@ Device speed data version:  "PRODUCTION 1.23 2013-06-08".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   120 out of  18,224    1%
-    Number used as Flip Flops:                  58
-    Number used as Latches:                     62
+  Number of Slice Registers:                   131 out of  18,224    1%
+    Number used as Flip Flops:                  76
+    Number used as Latches:                     55
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      1,913 out of   9,112   20%
-    Number used as logic:                    1,908 out of   9,112   20%
-      Number using O6 output only:           1,605
-      Number using O5 output only:              30
-      Number using O5 and O6:                  273
+  Number of Slice LUTs:                      1,997 out of   9,112   21%
+    Number used as logic:                    1,992 out of   9,112   21%
+      Number using O6 output only:           1,665
+      Number using O5 output only:              31
+      Number using O5 and O6:                  296
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
     Number used exclusively as route-thrus:      5
@@ -45,12 +45,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   774 out of   2,278   33%
+  Number of occupied Slices:                   823 out of   2,278   36%
   Number of MUXCYs used:                       148 out of   4,556    3%
-  Number of LUT Flip Flop pairs used:        1,942
-    Number with an unused Flip Flop:         1,824 out of   1,942   93%
-    Number with an unused LUT:                  29 out of   1,942    1%
-    Number of fully used LUT-FF pairs:          89 out of   1,942    4%
+  Number of LUT Flip Flop pairs used:        2,011
+    Number with an unused Flip Flop:         1,883 out of   2,011   93%
+    Number with an unused LUT:                  14 out of   2,011    1%
+    Number of fully used LUT-FF pairs:         114 out of   2,011    5%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -69,8 +69,8 @@ Specific Feature Utilization:
   Number of RAMB8BWERs:                          0 out of      64    0%
   Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
   Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
-  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
-    Number used as BUFGs:                        2
+  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
+    Number used as BUFGs:                        1
     Number used as BUFGMUX:                      0
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
@@ -99,13 +99,13 @@ Finished initial Timing Analysis.  REAL time: 4 secs
 Starting Router
 
 
-Phase  1  : 11442 unrouted;      REAL time: 5 secs 
+Phase  1  : 11880 unrouted;      REAL time: 5 secs 
 
-Phase  2  : 10770 unrouted;      REAL time: 5 secs 
+Phase  2  : 11199 unrouted;      REAL time: 5 secs 
 
-Phase  3  : 5267 unrouted;      REAL time: 7 secs 
+Phase  3  : 5688 unrouted;      REAL time: 7 secs 
 
-Phase  4  : 5267 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
+Phase  4  : 5688 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
 
 Updating file: Game.ncd with current fully routed design.
 
@@ -139,44 +139,23 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X3Y13| No   |   26 |  0.047     |  0.896      |
-+---------------------+--------------+------+------+------------+-------------+
-|           move_BUFG |  BUFGMUX_X2Y3| No   |   11 |  0.019     |  0.868      |
-+---------------------+--------------+------+------+------------+-------------+
-| hard_ai/rot2/_n0158 |         Local|      |    6 |  0.734     |  1.209      |
+|           clk_BUFGP | BUFGMUX_X3Y13| No   |   24 |  0.018     |  0.868      |
 +---------------------+--------------+------+------+------------+-------------+
 |state/move_GND_25_o_ |              |      |      |            |             |
-|           AND_284_o |         Local|      |    1 |  0.000     |  0.388      |
+|           AND_278_o |         Local|      |    3 |  0.366     |  0.927      |
 +---------------------+--------------+------+------+------------+-------------+
 |state/move_GND_25_o_ |              |      |      |            |             |
-|           AND_290_o |         Local|      |    1 |  0.000     |  0.462      |
+|           AND_293_o |         Local|      |    7 |  1.836     |  2.470      |
 +---------------------+--------------+------+------+------------+-------------+
-|state/move_GND_25_o_ |              |      |      |            |             |
-|           AND_288_o |         Local|      |    1 |  0.000     |  0.302      |
+| hard_ai/rot3/_n0158 |         Local|      |    4 |  0.393     |  0.933      |
 +---------------------+--------------+------+------+------------+-------------+
-| hard_ai/rot1/_n0158 |         Local|      |    4 |  1.019     |  1.473      |
+| hard_ai/rot4/_n0158 |         Local|      |    5 |  0.413     |  0.719      |
 +---------------------+--------------+------+------+------------+-------------+
-| hard_ai/rot3/_n0158 |         Local|      |    5 |  1.086     |  1.372      |
+|      logic_en_delay |         Local|      |    6 |  1.298     |  1.987      |
 +---------------------+--------------+------+------+------------+-------------+
-|      logic_en_delay |         Local|      |    1 |  0.000     |  1.019      |
+| hard_ai/rot2/_n0158 |         Local|      |    6 |  0.386     |  0.880      |
 +---------------------+--------------+------+------+------------+-------------+
-|state/move_GND_25_o_ |              |      |      |            |             |
-|           AND_298_o |         Local|      |    1 |  0.000     |  0.570      |
-+---------------------+--------------+------+------+------------+-------------+
-|state/move_GND_25_o_ |              |      |      |            |             |
-|           AND_294_o |         Local|      |    1 |  0.000     |  0.744      |
-+---------------------+--------------+------+------+------------+-------------+
-|state/move_GND_25_o_ |              |      |      |            |             |
-|           AND_292_o |         Local|      |    1 |  0.000     |  0.469      |
-+---------------------+--------------+------+------+------------+-------------+
-|state/move_GND_25_o_ |              |      |      |            |             |
-|           AND_286_o |         Local|      |    1 |  0.000     |  0.469      |
-+---------------------+--------------+------+------+------------+-------------+
-|state/move_GND_25_o_ |              |      |      |            |             |
-|           AND_300_o |         Local|      |    1 |  0.000     |  0.302      |
-+---------------------+--------------+------+------+------------+-------------+
-|state/move_GND_25_o_ |              |      |      |            |             |
-|           AND_296_o |         Local|      |    1 |  0.000     |  0.469      |
+| hard_ai/rot1/_n0158 |         Local|      |    5 |  0.348     |  0.812      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -196,8 +175,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |     2.781ns|     7.219ns|       0|           0
-  pin" 100 MHz HIGH 50%                     | HOLD        |     0.440ns|            |       0|           0
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |     5.295ns|     4.705ns|       0|           0
+  pin" 100 MHz HIGH 50%                     | HOLD        |     0.451ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 

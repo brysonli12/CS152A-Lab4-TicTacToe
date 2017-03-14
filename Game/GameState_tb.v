@@ -5,30 +5,37 @@ module GameState_TB;
 	reg rst;
 	reg move;
 	reg clk;
-	reg player;
+	//reg player;
 	reg [3:0] nextMove;
 
 	wire [8:0] X_state;
 	wire [8:0] O_state;
+	wire [8:0] AIMove;
+	wire [8:0] AIMove_hard;
 	wire [2:0] status;
+	reg AISwitch;
+	
 	integer i, j;
 	
 	initial begin
 		clk = 0;
 		rst = 1;
+		AISwitch =1 ;
 		#1 rst = 0;
-		move =1;//make move
-		player =0;//O
+		move =0;//make move
+		//player =0;//O
 		nextMove = 0; // top left
-		#10
+		#20
 		$display("Game Status: %b X-state: %b O-state: %b", status, X_state, O_state);
 		#20
-		move =1;//make move
-		player =1;//O
+		move = 1;//make move
+		//player =1;//O
 		nextMove = 1; // top left
 		#5
+		move = 0;
 		$display("Game Status: %b X-state: %b O-state: %b", status, X_state, O_state);
 		#20
+		move = 1;
 		i = 0; j = 0;
 		while(i < 9 && j < 9)
 		begin
@@ -41,6 +48,7 @@ module GameState_TB;
 			if(i +1 %3 == 0) $display("\n");
 			i = i+1; j=j+1;
 		end
+		$display("X_pos | AIMove %b", X_state | AIMove);
 		$display("X: %b", X_state);
 		$display("O: %b", O_state);
 		$display("Game Status: %b", status);
@@ -52,21 +60,35 @@ module GameState_TB;
 
 	always #5 clk = ~clk;
 
-	GameState gs (
-		.rst(rst), // start over, new game
-		.move(move) ,// indicate that you want to make a move
-		.clk(clk),
-		.player(player), // 1 for X, 0 for O
-		.nextMove(nextMove), // 4 digits, decides on location to try to make a move
-		.X_state(X_state),
-		.O_state(O_state),
-		.GameStatus(status)
-	// 0 (00) means game has just started/ can keep going on
-	// 1 (01) means that X has won
-	// 2 (10)means that O has won
-	// 3 (11)means that there is a draw
-	// 4 (100)invalid move
+		
+SimpleAI sa(
+	.X_state(X_state),
+	.O_state(O_state),
+	.AIMove(AIMove)
 	);
+	
+LookupTableAI hard_ai(
+	.X_state(X_state),
+	.O_state(O_state),
+	.AIMove(AIMove_hard)
+	);
+GameState state(
+	.rst(rst),
+	.move(move),
+	.clk(clk),
+	
+	.nextMove(nextMove),
+	.AISwitch(AISwitch),
+	.AIMove(AIMove),
+	.AIMove_Hard(AIMove_hard),
+	
+	
+//	.player(player),
+	.X_state(X_state),
+	.O_state(O_state),
+	.GameStatus(status)
+	);
+
 
 	
 

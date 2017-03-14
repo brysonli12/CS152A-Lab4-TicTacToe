@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: Game.prj
 
@@ -290,30 +290,43 @@ Unit <RARb_3> synthesized.
 
 Synthesizing Unit <GameState>.
     Related source file is "C:\Users\152\Desktop\CS152A-Lab4-TicTacToe\Game\GameState.v".
-    Found 1-bit register for signal <player>.
     Found 3-bit register for signal <game_stats>.
-WARNING:Xst:737 - Found 1-bit latch for signal <X_pos<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <X_pos<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <X_pos<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <X_pos<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <X_pos<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <X_pos<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <X_pos<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <X_pos<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <O_pos<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <O_pos<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <O_pos<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <O_pos<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <O_pos<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <O_pos<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <O_pos<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <O_pos<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <O_pos<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <X_pos<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 9-bit register for signal <X_pos>.
+    Found 9-bit register for signal <O_pos>.
+    Found 1-bit register for signal <player>.
+    Found 1-bit 9-to-1 multiplexer for signal <nextMove[3]_tmp_O_pos[8]_Mux_39_o> created at line 46.
+    Found 1-bit 9-to-1 multiplexer for signal <nextMove[3]_tmp_O_pos[7]_Mux_41_o> created at line 46.
+    Found 1-bit 12-to-1 multiplexer for signal <nextMove[3]_GND_27_o_Mux_42_o> created at line 46.
+    Found 1-bit 9-to-1 multiplexer for signal <nextMove[3]_tmp_O_pos[6]_Mux_43_o> created at line 46.
+    Found 1-bit 9-to-1 multiplexer for signal <nextMove[3]_tmp_O_pos[5]_Mux_45_o> created at line 46.
+    Found 1-bit 9-to-1 multiplexer for signal <nextMove[3]_tmp_O_pos[4]_Mux_47_o> created at line 46.
+    Found 1-bit 9-to-1 multiplexer for signal <nextMove[3]_tmp_O_pos[3]_Mux_49_o> created at line 46.
+    Found 1-bit 9-to-1 multiplexer for signal <nextMove[3]_tmp_O_pos[2]_Mux_51_o> created at line 46.
+    Found 1-bit 9-to-1 multiplexer for signal <nextMove[3]_tmp_O_pos[1]_Mux_53_o> created at line 46.
+    Found 1-bit 9-to-1 multiplexer for signal <nextMove[3]_tmp_O_pos[0]_Mux_55_o> created at line 46.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_O_pos<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_O_pos<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_O_pos<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_O_pos<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_O_pos<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_O_pos<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_O_pos<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_O_pos<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_X_pos<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_X_pos<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_X_pos<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_X_pos<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_X_pos<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_X_pos<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_X_pos<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_X_pos<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_X_pos<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_player>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_O_pos<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	inferred   4 D-type flip-flop(s).
-	inferred  18 Latch(s).
-	inferred  13 Multiplexer(s).
+	inferred  22 D-type flip-flop(s).
+	inferred  19 Latch(s).
+	inferred  24 Multiplexer(s).
 Unit <GameState> synthesized.
 
 Synthesizing Unit <vga640x480>.
@@ -416,21 +429,24 @@ Macro Statistics
  18-bit adder                                          : 1
  32-bit adder                                          : 9
  32-bit subtractor                                     : 6
-# Registers                                            : 22
+# Registers                                            : 24
  1-bit register                                        : 17
  10-bit register                                       : 2
  18-bit register                                       : 1
  2-bit register                                        : 1
  3-bit register                                        : 1
-# Latches                                              : 54
- 1-bit latch                                           : 54
+ 9-bit register                                        : 2
+# Latches                                              : 55
+ 1-bit latch                                           : 55
 # Comparators                                          : 20
  10-bit comparator greater                             : 15
  10-bit comparator lessequal                           : 5
-# Multiplexers                                         : 81
+# Multiplexers                                         : 92
+ 1-bit 12-to-1 multiplexer                             : 1
  1-bit 2-to-1 multiplexer                              : 13
+ 1-bit 9-to-1 multiplexer                              : 9
  2-bit 2-to-1 multiplexer                              : 23
- 3-bit 2-to-1 multiplexer                              : 45
+ 3-bit 2-to-1 multiplexer                              : 46
 
 =========================================================================
 
@@ -446,7 +462,7 @@ Unit <clockdiv> synthesized (advanced).
 Synthesizing (advanced) Unit <vga640x480>.
 The following registers are absorbed into counter <hc>: 1 register on signal <hc>.
 The following registers are absorbed into counter <vc>: 1 register on signal <vc>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n20908> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n29102> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -457,7 +473,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n20908> will be implemented on LUTs
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n29102> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n33199> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -468,7 +484,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n29102> will be implemented on LUTs
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n8617> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n16811> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -479,7 +495,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n8617> will be implemented on LUTs 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n4520> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n37296> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -490,7 +506,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n4520> will be implemented on LUTs 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n33199> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n12714> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -501,7 +517,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n33199> will be implemented on LUTs
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n12714> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n4520> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -512,7 +528,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n12714> will be implemented on LUTs
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n25005> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n8617> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -523,7 +539,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n25005> will be implemented on LUTs
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n37296> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n20908> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -534,7 +550,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n37296> will be implemented on LUTs
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n16811> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n25005> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -563,22 +579,23 @@ Macro Statistics
 # Counters                                             : 3
  10-bit up counter                                     : 2
  18-bit up counter                                     : 1
-# Registers                                            : 22
- Flip-Flops                                            : 22
+# Registers                                            : 40
+ Flip-Flops                                            : 40
 # Comparators                                          : 20
  10-bit comparator greater                             : 15
  10-bit comparator lessequal                           : 5
-# Multiplexers                                         : 81
+# Multiplexers                                         : 92
+ 1-bit 12-to-1 multiplexer                             : 1
  1-bit 2-to-1 multiplexer                              : 13
+ 1-bit 9-to-1 multiplexer                              : 9
  2-bit 2-to-1 multiplexer                              : 23
- 3-bit 2-to-1 multiplexer                              : 45
+ 3-bit 2-to-1 multiplexer                              : 46
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1989 - Unit <LookupTableAI>: instances <rot1>, <rot4> of unit <LookupTable> are equivalent, second instance is removed
 WARNING:Xst:2677 - Node <Mmult_n02631> of sequential type is unconnected in block <vga640x480>.
 WARNING:Xst:2677 - Node <Mmult_n03241> of sequential type is unconnected in block <vga640x480>.
 WARNING:Xst:2677 - Node <Mmult_n02811> of sequential type is unconnected in block <vga640x480>.
@@ -604,19 +621,10 @@ WARNING:Xst:2677 - Node <state/game_stats_0> of sequential type is unconnected i
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Game, actual ratio is 32.
+Found area constraint ratio of 100 (+ 5) on block Game, actual ratio is 34.
 FlipFlop U3/hc_1 has been replicated 1 time(s)
 FlipFlop U3/hc_2 has been replicated 1 time(s)
 FlipFlop U3/hc_3 has been replicated 1 time(s)
-Latch state/X_pos_0 has been replicated 1 time(s)
-Latch state/X_pos_1 has been replicated 1 time(s)
-Latch state/X_pos_2 has been replicated 2 time(s)
-Latch state/X_pos_3 has been replicated 1 time(s)
-Latch state/X_pos_4 has been replicated 3 time(s)
-Latch state/X_pos_5 has been replicated 1 time(s)
-Latch state/X_pos_6 has been replicated 3 time(s)
-Latch state/X_pos_7 has been replicated 2 time(s)
-Latch state/X_pos_8 has been replicated 3 time(s)
 
 Final Macro Processing ...
 
@@ -624,8 +632,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 58
- Flip-Flops                                            : 58
+# Registers                                            : 76
+ Flip-Flops                                            : 76
 
 =========================================================================
 
@@ -648,32 +656,27 @@ Top Level Output File Name         : Game.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2515
+# BELS                             : 2623
 #      GND                         : 1
 #      INV                         : 5
 #      LUT1                        : 33
-#      LUT2                        : 98
-#      LUT3                        : 149
-#      LUT4                        : 186
-#      LUT5                        : 426
-#      LUT6                        : 1293
+#      LUT2                        : 95
+#      LUT3                        : 158
+#      LUT4                        : 182
+#      LUT5                        : 482
+#      LUT6                        : 1342
 #      MUXCY                       : 132
-#      MUXF7                       : 38
+#      MUXF7                       : 39
 #      MUXF8                       : 9
 #      VCC                         : 1
 #      XORCY                       : 144
-# FlipFlops/Latches                : 120
-#      FD                          : 10
-#      FDE                         : 2
+# FlipFlops/Latches                : 131
+#      FD                          : 25
+#      FDC                         : 19
 #      FDP                         : 2
-#      FDPE                        : 1
 #      FDR                         : 30
-#      FDRE                        : 13
-#      LD                          : 27
-#      LDC                         : 9
-#      LDCE_1                      : 26
-# Clock Buffers                    : 2
-#      BUFG                        : 1
+#      LD                          : 55
+# Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 18
 #      IBUF                        : 8
@@ -688,23 +691,23 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             120  out of  18224     0%  
- Number of Slice LUTs:                 2190  out of   9112    24%  
-    Number used as Logic:              2190  out of   9112    24%  
+ Number of Slice Registers:             131  out of  18224     0%  
+ Number of Slice LUTs:                 2297  out of   9112    25%  
+    Number used as Logic:              2297  out of   9112    25%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2230
-   Number with an unused Flip Flop:    2110  out of   2230    94%  
-   Number with an unused LUT:            40  out of   2230     1%  
-   Number of fully used LUT-FF pairs:    80  out of   2230     3%  
-   Number of unique control sets:        21
+ Number of LUT Flip Flop pairs used:   2327
+   Number with an unused Flip Flop:    2196  out of   2327    94%  
+   Number with an unused LUT:            30  out of   2327     1%  
+   Number of fully used LUT-FF pairs:   101  out of   2327     4%  
+   Number of unique control sets:        12
 
 IO Utilization: 
  Number of IOs:                          19
  Number of bonded IOBs:                  19  out of    232     8%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
  Number of DSP48A1s:                      3  out of     32     9%  
 
 ---------------------------
@@ -729,22 +732,15 @@ Clock Information:
 Clock Signal                                                   | Clock buffer(FF name)       | Load  |
 ---------------------------------------------------------------+-----------------------------+-------+
 clk                                                            | BUFGP                       | 57    |
+hard_ai/rot4/_n0158(hard_ai/rot4/Mmux__n015811:O)              | NONE(*)(hard_ai/rot4/move_8)| 9     |
 hard_ai/rot3/_n0158(hard_ai/rot3/Mmux__n01581:O)               | NONE(*)(hard_ai/rot3/move_8)| 9     |
 hard_ai/rot2/_n0158(hard_ai/rot2/Mmux__n015811:O)              | NONE(*)(hard_ai/rot2/move_8)| 9     |
 hard_ai/rot1/_n0158(hard_ai/rot1/Mmux__n015811:O)              | NONE(*)(hard_ai/rot1/move_8)| 9     |
-move(deb_S/debounced_btn_input1:O)                             | BUFG(*)(state/X_pos_8)      | 26    |
-state/move_GND_25_o_AND_300_o(state/move_GND_25_o_AND_300_o1:O)| NONE(*)(state/O_pos_0)      | 1     |
-state/move_GND_25_o_AND_298_o(state/move_GND_25_o_AND_298_o1:O)| NONE(*)(state/O_pos_1)      | 1     |
-state/move_GND_25_o_AND_296_o(state/move_GND_25_o_AND_296_o1:O)| NONE(*)(state/O_pos_2)      | 1     |
-state/move_GND_25_o_AND_294_o(state/move_GND_25_o_AND_294_o1:O)| NONE(*)(state/O_pos_3)      | 1     |
-state/move_GND_25_o_AND_292_o(state/move_GND_25_o_AND_292_o1:O)| NONE(*)(state/O_pos_4)      | 1     |
-state/move_GND_25_o_AND_290_o(state/move_GND_25_o_AND_290_o1:O)| NONE(*)(state/O_pos_5)      | 1     |
-state/move_GND_25_o_AND_288_o(state/move_GND_25_o_AND_288_o1:O)| NONE(*)(state/O_pos_6)      | 1     |
-state/move_GND_25_o_AND_286_o(state/move_GND_25_o_AND_286_o1:O)| NONE(*)(state/O_pos_7)      | 1     |
-state/move_GND_25_o_AND_284_o(state/move_GND_25_o_AND_284_o1:O)| NONE(*)(state/O_pos_8)      | 1     |
-logic_en_delay(U1/logic_en_11:O)                               | NONE(*)(state/player)       | 1     |
+logic_en_delay(U1/logic_en_11:O)                               | NONE(*)(state/X_pos_8)      | 19    |
+state/move_GND_25_o_AND_293_o(state/move_GND_25_o_AND_293_o1:O)| NONE(*)(state/tmp_X_pos_0)  | 10    |
+state/move_GND_25_o_AND_278_o(state/move_GND_25_o_AND_278_o7:O)| NONE(*)(state/tmp_O_pos_0)  | 9     |
 ---------------------------------------------------------------+-----------------------------+-------+
-(*) These 14 clock signal(s) are generated by combinatorial logic,
+(*) These 7 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -757,9 +753,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 5.832ns (Maximum Frequency: 171.456MHz)
+   Minimum period: 3.922ns (Maximum Frequency: 254.969MHz)
    Minimum input arrival time before clock: 2.268ns
-   Maximum output required time after clock: 31.290ns
+   Maximum output required time after clock: 31.416ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -768,77 +764,27 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.596ns (frequency: 178.690MHz)
-  Total number of paths / destination ports: 850 / 105
+  Clock period: 3.922ns (frequency: 254.969MHz)
+  Total number of paths / destination ports: 719 / 77
 -------------------------------------------------------------------------
-Delay:               5.596ns (Levels of Logic = 5)
-  Source:            U3/hc_3_1 (FF)
+Delay:               3.922ns (Levels of Logic = 3)
+  Source:            U3/vc_8 (FF)
   Destination:       U3/vc_0 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: U3/hc_3_1 to U3/vc_0
+  Data Path: U3/vc_8 to U3/vc_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             1   0.447   0.808  U3/hc_3_1 (U3/hc_3_1)
-     LUT3:I0->O           10   0.205   0.857  U3/Msub_n0378_Madd_xor<8>121 (U3/Msub_n0378_Madd_xor<8>12)
-     LUT6:I5->O            2   0.205   0.617  U3/Mcount_vc_val21 (U3/Mcount_vc_val21)
-     LUT5:I4->O           11   0.205   0.883  U3/Mcount_vc_val22 (U3/Mcount_vc_val2)
-     LUT6:I5->O           10   0.205   0.857  U3/Mcount_vc_val (U3/Mcount_vc_val)
-     LUT4:I3->O            1   0.205   0.000  U3/vc_0_rstpot (U3/vc_0_rstpot)
+     FD:C->Q              20   0.447   1.321  U3/vc_8 (U3/vc_8)
+     LUT4:I1->O            1   0.205   0.580  U3/Mcount_vc_val_SW0 (N47)
+     LUT4:I3->O           10   0.205   0.857  U3/Mcount_vc_val22_SW0 (N71)
+     LUT6:I5->O            1   0.205   0.000  U3/vc_0_rstpot (U3/vc_0_rstpot)
      FD:D                      0.102          U3/vc_0
     ----------------------------------------
-    Total                      5.596ns (1.574ns logic, 4.022ns route)
-                                       (28.1% logic, 71.9% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'move'
-  Clock period: 5.832ns (frequency: 171.456MHz)
-  Total number of paths / destination ports: 3947 / 26
--------------------------------------------------------------------------
-Delay:               5.832ns (Levels of Logic = 5)
-  Source:            state/X_pos_4_1 (LATCH)
-  Destination:       state/X_pos_1 (LATCH)
-  Source Clock:      move rising
-  Destination Clock: move rising
-
-  Data Path: state/X_pos_4_1 to state/X_pos_1
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDCE_1:G->Q           5   0.498   0.943  state/X_pos_4_1 (state/X_pos_4_1)
-     LUT4:I1->O            3   0.205   0.651  sa/winX/cout<8>_SW0 (N21)
-     LUT5:I4->O           10   0.205   1.104  sa/winX/cout<8> (sa/win<8>)
-     LUT6:I2->O           10   0.203   0.857  sa/pick/ra/g<11>1 (sa/pick/ra/g<11>1)
-     LUT6:I5->O            2   0.205   0.721  sa/pick/ra/g<11>31 (sa/pick/ra/c<11>)
-     LUT6:I4->O            3   0.203   0.000  state/X_pos[8]_AIMove[8]_or_13_OUT<2> (state/X_pos[8]_AIMove[8]_or_13_OUT<2>)
-     LDCE_1:D                  0.037          state/X_pos_2
-    ----------------------------------------
-    Total                      5.832ns (1.556ns logic, 4.276ns route)
-                                       (26.7% logic, 73.3% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'logic_en_delay'
-  Clock period: 2.611ns (frequency: 383.021MHz)
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Delay:               2.611ns (Levels of Logic = 1)
-  Source:            state/player (FF)
-  Destination:       state/player (FF)
-  Source Clock:      logic_en_delay rising
-  Destination Clock: logic_en_delay rising
-
-  Data Path: state/player to state/player
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDPE:C->Q            31   0.447   1.277  state/player (state/player)
-     INV:I->O              1   0.206   0.579  state/GND_25_o_GND_25_o_equal_1_o1_INV_0 (state/GND_25_o_GND_25_o_equal_1_o)
-     FDPE:D                    0.102          state/player
-    ----------------------------------------
-    Total                      2.611ns (0.755ns logic, 1.856ns route)
-                                       (28.9% logic, 71.1% route)
+    Total                      3.922ns (1.164ns logic, 2.758ns route)
+                                       (29.7% logic, 70.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -863,7 +809,7 @@ Offset:              2.268ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 326993093 / 10
 -------------------------------------------------------------------------
-Offset:              31.290ns (Levels of Logic = 27)
+Offset:              31.416ns (Levels of Logic = 27)
   Source:            U3/vc_3 (FF)
   Destination:       green<2> (PAD)
   Source Clock:      clk rising
@@ -873,7 +819,7 @@ Offset:              31.290ns (Levels of Logic = 27)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q              27   0.447   1.449  U3/vc_3 (U3/vc_3)
-     LUT4:I1->O            5   0.205   0.962  U3/GND_45_o_vc[9]_AND_1354_o21 (U3/GND_45_o_vc[9]_AND_1354_o2)
+     LUT4:I1->O            5   0.205   0.962  U3/GND_45_o_vc[9]_AND_1356_o21 (U3/GND_45_o_vc[9]_AND_1356_o2)
      LUT5:I1->O            8   0.203   1.147  U3/Msub_GND_45_o_GND_45_o_sub_305_OUT_cy<7>11 (U3/Msub_GND_45_o_GND_45_o_sub_305_OUT_cy<7>)
      LUT5:I0->O            3   0.203   0.995  U3/Msub_GND_45_o_GND_45_o_sub_306_OUT_xor<9>11 (U3/GND_45_o_GND_45_o_sub_306_OUT<9>)
      LUT5:I0->O            1   0.203   0.579  U3/Msub_GND_45_o_GND_45_o_sub_308_OUT_xor<9>11 (U3/GND_45_o_GND_45_o_sub_308_OUT<9>)
@@ -884,257 +830,50 @@ Offset:              31.290ns (Levels of Logic = 27)
      MUXCY:CI->O           1   0.019   0.000  U3/Madd_n0325_Madd_cy<2> (U3/Madd_n0325_Madd_cy<2>)
      MUXCY:CI->O           1   0.019   0.000  U3/Madd_n0325_Madd_cy<3> (U3/Madd_n0325_Madd_cy<3>)
      XORCY:CI->O          96   0.180   2.195  U3/Madd_n0325_Madd_xor<4> (U3/n0325<4>)
-     LUT6:I1->O           10   0.203   1.104  U3_Mram__n16811611 (U3_Mram__n1681161)
+     LUT6:I1->O           10   0.203   1.104  U3_Mram__n25005611 (U3_Mram__n2500561)
      LUT6:I2->O            2   0.203   0.961  U3_SF31661 (U3_SF3166)
      LUT6:I1->O            2   0.203   0.845  U3_SF31806 (U3_SF31806)
-     LUT6:I3->O            1   0.205   0.944  U3_Mram__n16811671580_SW1 (U3_N528)
-     LUT6:I0->O            1   0.203   0.944  U3_Mram__n16811671580 (U3_Mram__n16811671579)
-     LUT6:I0->O            1   0.203   0.924  U3_Mram__n16811671583_SW0 (U3_N406)
-     LUT6:I1->O            1   0.203   0.684  U3_Mram__n16811671583 (U3_Mram__n16811671582)
-     LUT6:I4->O            1   0.203   0.827  U3_Mram__n16811671584 (U3_Mram__n16811671583)
-     LUT6:I2->O            1   0.203   0.580  U3_Mram__n16811671585 (U3/_n16811<0>)
-     LUT4:I3->O            1   0.205   0.808  U3/GND_45_o_GND_45_o_AND_1358_o114_SW0 (N162)
-     LUT5:I2->O            1   0.205   0.808  U3/GND_45_o_GND_45_o_AND_1358_o117_SW0 (N166)
-     LUT5:I2->O            3   0.205   0.898  U3/GND_45_o_GND_45_o_AND_1358_o117 (U3/GND_45_o_GND_45_o_AND_1358_o_mmx_out)
+     LUT6:I3->O            1   0.205   0.944  U3_Mram__n25005671580_SW1 (U3_N528)
+     LUT6:I0->O            1   0.203   0.944  U3_Mram__n25005671580 (U3_Mram__n25005671579)
+     LUT6:I0->O            1   0.203   0.924  U3_Mram__n25005671583_SW0 (U3_N406)
+     LUT6:I1->O            1   0.203   0.808  U3_Mram__n25005671583 (U3_Mram__n25005671582)
+     LUT6:I3->O            1   0.205   0.827  U3_Mram__n25005671584 (U3_Mram__n25005671583)
+     LUT6:I2->O            1   0.203   0.580  U3_Mram__n25005671585 (U3/_n25005<0>)
+     LUT4:I3->O            1   0.205   0.808  U3/GND_45_o_GND_45_o_AND_1360_o114_SW0 (N113)
+     LUT5:I2->O            1   0.205   0.808  U3/GND_45_o_GND_45_o_AND_1360_o117_SW0 (N115)
+     LUT5:I2->O            3   0.205   0.898  U3/GND_45_o_GND_45_o_AND_1360_o117 (U3/GND_45_o_GND_45_o_AND_1360_o_mmx_out)
      LUT6:I2->O            1   0.203   0.924  U3/Mmux_green131 (U3/Mmux_green131)
      LUT6:I1->O            2   0.203   0.617  U3/Mmux_green132 (U3/Mmux_green13)
      LUT4:I3->O            1   0.205   0.579  U3/Mmux_green51 (green_2_OBUF)
      OBUF:I->O                 2.571          green_2_OBUF (green<2>)
     ----------------------------------------
-    Total                     31.290ns (10.865ns logic, 20.425ns route)
-                                       (34.7% logic, 65.3% route)
+    Total                     31.416ns (10.867ns logic, 20.549ns route)
+                                       (34.6% logic, 65.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_25_o_AND_290_o'
-  Total number of paths / destination ports: 3 / 3
+Timing constraint: Default OFFSET OUT AFTER for Clock 'logic_en_delay'
+  Total number of paths / destination ports: 88 / 8
 -------------------------------------------------------------------------
-Offset:              7.699ns (Levels of Logic = 4)
-  Source:            state/O_pos_5 (LATCH)
-  Destination:       red<1> (PAD)
-  Source Clock:      state/move_GND_25_o_AND_290_o falling
-
-  Data Path: state/O_pos_5 to red<1>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDC:G->Q             83   0.498   2.013  state/O_pos_5 (state/O_pos_5)
-     LUT6:I2->O            2   0.203   0.617  U3/Mmux_green1413 (U3/Mmux_green1413)
-     LUT6:I5->O            1   0.205   0.808  U3/Mmux_green143 (U3/Mmux_green142)
-     LUT6:I3->O            1   0.205   0.579  U3/Mmux_green144 (red_1_OBUF)
-     OBUF:I->O                 2.571          red_1_OBUF (red<1>)
-    ----------------------------------------
-    Total                      7.699ns (3.682ns logic, 4.017ns route)
-                                       (47.8% logic, 52.2% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'move'
-  Total number of paths / destination ports: 44 / 8
--------------------------------------------------------------------------
-Offset:              10.579ns (Levels of Logic = 7)
-  Source:            state/X_pos_8 (LATCH)
+Offset:              11.016ns (Levels of Logic = 7)
+  Source:            state/O_pos_8 (FF)
   Destination:       green<2> (PAD)
-  Source Clock:      move rising
-
-  Data Path: state/X_pos_8 to green<2>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDCE_1:G->Q          50   0.498   1.652  state/X_pos_8 (state/X_pos_8)
-     LUT4:I2->O            1   0.203   0.808  U3/GND_45_o_GND_45_o_AND_1358_o114_SW0 (N162)
-     LUT5:I2->O            1   0.205   0.808  U3/GND_45_o_GND_45_o_AND_1358_o117_SW0 (N166)
-     LUT5:I2->O            3   0.205   0.898  U3/GND_45_o_GND_45_o_AND_1358_o117 (U3/GND_45_o_GND_45_o_AND_1358_o_mmx_out)
-     LUT6:I2->O            1   0.203   0.924  U3/Mmux_green131 (U3/Mmux_green131)
-     LUT6:I1->O            2   0.203   0.617  U3/Mmux_green132 (U3/Mmux_green13)
-     LUT4:I3->O            1   0.205   0.579  U3/Mmux_green51 (green_2_OBUF)
-     OBUF:I->O                 2.571          green_2_OBUF (green<2>)
-    ----------------------------------------
-    Total                     10.579ns (4.293ns logic, 6.286ns route)
-                                       (40.6% logic, 59.4% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_25_o_AND_284_o'
-  Total number of paths / destination ports: 6 / 6
--------------------------------------------------------------------------
-Offset:              10.959ns (Levels of Logic = 7)
-  Source:            state/O_pos_8 (LATCH)
-  Destination:       green<2> (PAD)
-  Source Clock:      state/move_GND_25_o_AND_284_o falling
+  Source Clock:      logic_en_delay rising
 
   Data Path: state/O_pos_8 to green<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDC:G->Q             86   0.498   2.032  state/O_pos_8 (state/O_pos_8)
-     LUT4:I0->O            1   0.203   0.808  U3/GND_45_o_GND_45_o_AND_1358_o114_SW0 (N162)
-     LUT5:I2->O            1   0.205   0.808  U3/GND_45_o_GND_45_o_AND_1358_o117_SW0 (N166)
-     LUT5:I2->O            3   0.205   0.898  U3/GND_45_o_GND_45_o_AND_1358_o117 (U3/GND_45_o_GND_45_o_AND_1358_o_mmx_out)
+     FDC:C->Q            106   0.447   2.141  state/O_pos_8 (state/O_pos_8)
+     LUT4:I0->O            1   0.203   0.808  U3/GND_45_o_GND_45_o_AND_1360_o114_SW0 (N113)
+     LUT5:I2->O            1   0.205   0.808  U3/GND_45_o_GND_45_o_AND_1360_o117_SW0 (N115)
+     LUT5:I2->O            3   0.205   0.898  U3/GND_45_o_GND_45_o_AND_1360_o117 (U3/GND_45_o_GND_45_o_AND_1360_o_mmx_out)
      LUT6:I2->O            1   0.203   0.924  U3/Mmux_green131 (U3/Mmux_green131)
      LUT6:I1->O            2   0.203   0.617  U3/Mmux_green132 (U3/Mmux_green13)
      LUT4:I3->O            1   0.205   0.579  U3/Mmux_green51 (green_2_OBUF)
      OBUF:I->O                 2.571          green_2_OBUF (green<2>)
     ----------------------------------------
-    Total                     10.959ns (4.293ns logic, 6.666ns route)
-                                       (39.2% logic, 60.8% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_25_o_AND_286_o'
-  Total number of paths / destination ports: 7 / 7
--------------------------------------------------------------------------
-Offset:              10.597ns (Levels of Logic = 7)
-  Source:            state/O_pos_7 (LATCH)
-  Destination:       green<2> (PAD)
-  Source Clock:      state/move_GND_25_o_AND_286_o falling
-
-  Data Path: state/O_pos_7 to green<2>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDC:G->Q             60   0.498   1.861  state/O_pos_7 (state/O_pos_7)
-     LUT4:I0->O            2   0.203   0.617  U3/blue<1>211 (U3/blue<1>21)
-     LUT5:I4->O            1   0.205   0.808  U3/GND_45_o_GND_45_o_AND_1358_o117_SW0 (N166)
-     LUT5:I2->O            3   0.205   0.898  U3/GND_45_o_GND_45_o_AND_1358_o117 (U3/GND_45_o_GND_45_o_AND_1358_o_mmx_out)
-     LUT6:I2->O            1   0.203   0.924  U3/Mmux_green131 (U3/Mmux_green131)
-     LUT6:I1->O            2   0.203   0.617  U3/Mmux_green132 (U3/Mmux_green13)
-     LUT4:I3->O            1   0.205   0.579  U3/Mmux_green51 (green_2_OBUF)
-     OBUF:I->O                 2.571          green_2_OBUF (green<2>)
-    ----------------------------------------
-    Total                     10.597ns (4.293ns logic, 6.304ns route)
-                                       (40.5% logic, 59.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_25_o_AND_288_o'
-  Total number of paths / destination ports: 7 / 7
--------------------------------------------------------------------------
-Offset:              9.736ns (Levels of Logic = 6)
-  Source:            state/O_pos_6 (LATCH)
-  Destination:       green<2> (PAD)
-  Source Clock:      state/move_GND_25_o_AND_288_o falling
-
-  Data Path: state/O_pos_6 to green<2>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDC:G->Q             83   0.498   2.013  state/O_pos_6 (state/O_pos_6)
-     LUT4:I0->O            2   0.203   0.617  U3/Mmux_green3211 (U3/Mmux_green321)
-     LUT5:I4->O            3   0.205   0.898  U3/GND_45_o_GND_45_o_AND_1358_o117 (U3/GND_45_o_GND_45_o_AND_1358_o_mmx_out)
-     LUT6:I2->O            1   0.203   0.924  U3/Mmux_green131 (U3/Mmux_green131)
-     LUT6:I1->O            2   0.203   0.617  U3/Mmux_green132 (U3/Mmux_green13)
-     LUT4:I3->O            1   0.205   0.579  U3/Mmux_green51 (green_2_OBUF)
-     OBUF:I->O                 2.571          green_2_OBUF (green<2>)
-    ----------------------------------------
-    Total                      9.736ns (4.088ns logic, 5.648ns route)
-                                       (42.0% logic, 58.0% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_25_o_AND_296_o'
-  Total number of paths / destination ports: 6 / 6
--------------------------------------------------------------------------
-Offset:              7.916ns (Levels of Logic = 4)
-  Source:            state/O_pos_2 (LATCH)
-  Destination:       red<2> (PAD)
-  Source Clock:      state/move_GND_25_o_AND_296_o falling
-
-  Data Path: state/O_pos_2 to red<2>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDC:G->Q             83   0.498   2.013  state/O_pos_2 (state/O_pos_2)
-     LUT6:I2->O            4   0.203   1.028  U3/Mmux_green13211 (U3/Mmux_green1321)
-     LUT5:I0->O            1   0.203   0.580  U3/red<2>2 (U3/red<2>1)
-     LUT6:I5->O            2   0.205   0.616  U3/red<2>4 (red_0_OBUF)
-     OBUF:I->O                 2.571          red_2_OBUF (red<2>)
-    ----------------------------------------
-    Total                      7.916ns (3.680ns logic, 4.236ns route)
-                                       (46.5% logic, 53.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_25_o_AND_298_o'
-  Total number of paths / destination ports: 5 / 5
--------------------------------------------------------------------------
-Offset:              7.586ns (Levels of Logic = 4)
-  Source:            state/O_pos_1 (LATCH)
-  Destination:       red<1> (PAD)
-  Source Clock:      state/move_GND_25_o_AND_298_o falling
-
-  Data Path: state/O_pos_1 to red<1>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDC:G->Q             66   0.498   1.901  state/O_pos_1 (state/O_pos_1)
-     LUT4:I0->O            2   0.203   0.845  U3/blue<1>51 (U3/blue<1>5)
-     LUT5:I2->O            1   0.205   0.580  U3/Mmux_green141 (U3/Mmux_green14)
-     LUT6:I5->O            1   0.205   0.579  U3/Mmux_green144 (red_1_OBUF)
-     OBUF:I->O                 2.571          red_1_OBUF (red<1>)
-    ----------------------------------------
-    Total                      7.586ns (3.682ns logic, 3.904ns route)
-                                       (48.5% logic, 51.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_25_o_AND_292_o'
-  Total number of paths / destination ports: 3 / 3
--------------------------------------------------------------------------
-Offset:              8.615ns (Levels of Logic = 5)
-  Source:            state/O_pos_4 (LATCH)
-  Destination:       green<2> (PAD)
-  Source Clock:      state/move_GND_25_o_AND_292_o falling
-
-  Data Path: state/O_pos_4 to green<2>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDC:G->Q             80   0.498   1.993  state/O_pos_4 (state/O_pos_4)
-     LUT4:I0->O            2   0.203   0.617  U3/Mmux_green1211 (U3/Mmux_green121)
-     LUT6:I5->O            1   0.205   0.924  U3/Mmux_green131 (U3/Mmux_green131)
-     LUT6:I1->O            2   0.203   0.617  U3/Mmux_green132 (U3/Mmux_green13)
-     LUT4:I3->O            1   0.205   0.579  U3/Mmux_green51 (green_2_OBUF)
-     OBUF:I->O                 2.571          green_2_OBUF (green<2>)
-    ----------------------------------------
-    Total                      8.615ns (3.885ns logic, 4.730ns route)
-                                       (45.1% logic, 54.9% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_25_o_AND_300_o'
-  Total number of paths / destination ports: 5 / 5
--------------------------------------------------------------------------
-Offset:              7.601ns (Levels of Logic = 4)
-  Source:            state/O_pos_0 (LATCH)
-  Destination:       green<2> (PAD)
-  Source Clock:      state/move_GND_25_o_AND_300_o falling
-
-  Data Path: state/O_pos_0 to green<2>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDC:G->Q             92   0.498   2.072  state/O_pos_0 (state/O_pos_0)
-     LUT5:I1->O            3   0.203   0.651  U3/blue<1>321 (U3/blue<1>32)
-     LUT6:I5->O            2   0.205   0.617  U3/Mmux_green132 (U3/Mmux_green13)
-     LUT4:I3->O            1   0.205   0.579  U3/Mmux_green51 (green_2_OBUF)
-     OBUF:I->O                 2.571          green_2_OBUF (green<2>)
-    ----------------------------------------
-    Total                      7.601ns (3.682ns logic, 3.919ns route)
-                                       (48.4% logic, 51.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'state/move_GND_25_o_AND_294_o'
-  Total number of paths / destination ports: 2 / 2
--------------------------------------------------------------------------
-Offset:              8.012ns (Levels of Logic = 4)
-  Source:            state/O_pos_3 (LATCH)
-  Destination:       blue<1> (PAD)
-  Source Clock:      state/move_GND_25_o_AND_294_o falling
-
-  Data Path: state/O_pos_3 to blue<1>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDC:G->Q             73   0.498   1.947  state/O_pos_3 (state/O_pos_3)
-     LUT6:I2->O            1   0.203   0.944  U3/blue<1>2 (U3/blue<1>2)
-     LUT6:I0->O            1   0.203   0.827  U3/blue<1>4 (U3/blue<1>4)
-     LUT6:I2->O            2   0.203   0.616  U3/blue<1>5 (blue_0_OBUF)
-     OBUF:I->O                 2.571          blue_1_OBUF (blue<1>)
-    ----------------------------------------
-    Total                      8.012ns (3.678ns logic, 4.334ns route)
-                                       (45.9% logic, 54.1% route)
+    Total                     11.016ns (4.242ns logic, 6.774ns route)
+                                       (38.5% logic, 61.5% route)
 
 =========================================================================
 
@@ -1146,172 +885,82 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    5.596|         |         |         |
+clk            |    3.922|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock hard_ai/rot1/_n0158
------------------------------+---------+---------+---------+---------+
-                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
------------------------------+---------+---------+---------+---------+
-move                         |         |         |    8.527|         |
-state/move_GND_25_o_AND_284_o|         |         |    7.398|         |
-state/move_GND_25_o_AND_286_o|         |         |    7.244|         |
-state/move_GND_25_o_AND_288_o|         |         |    6.822|         |
-state/move_GND_25_o_AND_290_o|         |         |    6.446|         |
-state/move_GND_25_o_AND_292_o|         |         |    6.819|         |
-state/move_GND_25_o_AND_294_o|         |         |    6.722|         |
-state/move_GND_25_o_AND_296_o|         |         |    6.411|         |
-state/move_GND_25_o_AND_298_o|         |         |    7.038|         |
-state/move_GND_25_o_AND_300_o|         |         |    7.312|         |
------------------------------+---------+---------+---------+---------+
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+logic_en_delay |         |         |    9.423|         |
+---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock hard_ai/rot2/_n0158
------------------------------+---------+---------+---------+---------+
-                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
------------------------------+---------+---------+---------+---------+
-move                         |         |         |    7.691|         |
-state/move_GND_25_o_AND_284_o|         |         |    8.498|         |
-state/move_GND_25_o_AND_286_o|         |         |    7.745|         |
-state/move_GND_25_o_AND_288_o|         |         |    7.231|         |
-state/move_GND_25_o_AND_290_o|         |         |    7.599|         |
-state/move_GND_25_o_AND_292_o|         |         |    8.003|         |
-state/move_GND_25_o_AND_294_o|         |         |    8.185|         |
-state/move_GND_25_o_AND_296_o|         |         |    8.352|         |
-state/move_GND_25_o_AND_298_o|         |         |    7.683|         |
-state/move_GND_25_o_AND_300_o|         |         |    7.887|         |
------------------------------+---------+---------+---------+---------+
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+logic_en_delay |         |         |    9.518|         |
+---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock hard_ai/rot3/_n0158
------------------------------+---------+---------+---------+---------+
-                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
------------------------------+---------+---------+---------+---------+
-move                         |         |         |    8.721|         |
-state/move_GND_25_o_AND_284_o|         |         |    7.998|         |
-state/move_GND_25_o_AND_286_o|         |         |    7.843|         |
-state/move_GND_25_o_AND_288_o|         |         |    7.989|         |
-state/move_GND_25_o_AND_290_o|         |         |    7.972|         |
-state/move_GND_25_o_AND_292_o|         |         |    7.678|         |
-state/move_GND_25_o_AND_294_o|         |         |    7.780|         |
-state/move_GND_25_o_AND_296_o|         |         |    7.102|         |
-state/move_GND_25_o_AND_298_o|         |         |    7.638|         |
-state/move_GND_25_o_AND_300_o|         |         |    7.911|         |
------------------------------+---------+---------+---------+---------+
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+logic_en_delay |         |         |    8.420|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock hard_ai/rot4/_n0158
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+logic_en_delay |         |         |    9.738|         |
+---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock logic_en_delay
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |    2.628|         |         |         |
-logic_en_delay |    2.611|         |         |         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock move
 -----------------------------+---------+---------+---------+---------+
                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------------+---------+---------+---------+---------+
-clk                          |    2.396|         |         |         |
-hard_ai/rot1/_n0158          |         |   10.591|         |         |
-hard_ai/rot2/_n0158          |         |    8.784|         |         |
-hard_ai/rot3/_n0158          |         |    7.075|         |         |
-logic_en_delay               |    2.046|         |         |         |
-move                         |    5.832|         |         |         |
-state/move_GND_25_o_AND_284_o|         |    6.161|         |         |
-state/move_GND_25_o_AND_286_o|         |    6.841|         |         |
-state/move_GND_25_o_AND_288_o|         |    6.997|         |         |
-state/move_GND_25_o_AND_290_o|         |    6.859|         |         |
-state/move_GND_25_o_AND_292_o|         |    6.994|         |         |
-state/move_GND_25_o_AND_294_o|         |    7.057|         |         |
-state/move_GND_25_o_AND_296_o|         |    6.895|         |         |
-state/move_GND_25_o_AND_298_o|         |    7.028|         |         |
-state/move_GND_25_o_AND_300_o|         |    7.090|         |         |
+clk                          |    2.154|         |         |         |
+state/move_GND_25_o_AND_278_o|         |    1.179|         |         |
+state/move_GND_25_o_AND_293_o|         |    1.179|         |         |
 -----------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock state/move_GND_25_o_AND_284_o
+Clock to Setup on destination clock state/move_GND_25_o_AND_278_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    2.396|         |
+clk            |         |         |    1.914|         |
+logic_en_delay |         |         |    2.943|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock state/move_GND_25_o_AND_286_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    2.396|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock state/move_GND_25_o_AND_288_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    2.396|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock state/move_GND_25_o_AND_290_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    2.396|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock state/move_GND_25_o_AND_292_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    2.396|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock state/move_GND_25_o_AND_294_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    2.396|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock state/move_GND_25_o_AND_296_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    2.396|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock state/move_GND_25_o_AND_298_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    2.396|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock state/move_GND_25_o_AND_300_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    2.396|         |
----------------+---------+---------+---------+---------+
+Clock to Setup on destination clock state/move_GND_25_o_AND_293_o
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+clk                |         |         |    2.693|         |
+hard_ai/rot1/_n0158|         |         |   13.325|         |
+hard_ai/rot2/_n0158|         |         |   11.603|         |
+hard_ai/rot3/_n0158|         |         |    8.719|         |
+hard_ai/rot4/_n0158|         |         |    6.665|         |
+logic_en_delay     |         |         |   12.413|         |
+-------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 64.00 secs
-Total CPU time to Xst completion: 63.50 secs
+Total CPU time to Xst completion: 63.82 secs
  
 --> 
 
-Total memory usage is 309064 kilobytes
+Total memory usage is 309448 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   42 (   0 filtered)

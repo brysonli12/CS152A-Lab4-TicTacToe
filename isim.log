@@ -1,0 +1,578 @@
+ISim log file
+Running: C:\Users\152\Desktop\CS152A-Lab4-TicTacToe\GameState_TB_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/GameState_TB_isim_beh.wdb 
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Game Status: 011 X-state: 111111111 O-state: 000000000
+Game Status: 011 X-state: 111111111 O-state: 010000000
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X: 111111111
+O: 010000000
+Game Status: 011
+0
+Stopped at time : 66 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 55
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 94
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 94
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 35
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 144
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 27
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 28
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 29
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Game Status: 011 X-state: 111111111 O-state: 000000000
+Game Status: 011 X-state: 111111111 O-state: 010000000
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X: 111111111
+O: 010000000
+Game Status: 011
+0
+Stopped at time : 66 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 55
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Game Status: 011 X-state: 111111111 O-state: 000000000
+Game Status: 011 X-state: 111111111 O-state: 010000000
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X: 111111111
+O: 010000000
+Game Status: 011
+0
+Stopped at time : 66 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 55
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Game Status: 011 X-state: 111111111 O-state: 000000000
+Game Status: 011 X-state: 111111111 O-state: 010000000
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X: 111111111
+O: 010000000
+Game Status: 011
+0
+Stopped at time : 66 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 55
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Game Status: 011 X-state: 111111111 O-state: 000000000
+Game Status: 011 X-state: 111111111 O-state: 010000000
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X_pos | AIMove 111111111
+X: 111111111
+O: 010000000
+Game Status: 011
+0
+Stopped at time : 66 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 56
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+X_pos | AIMove 000010000
+Game Status: 011 X-state: 111111111 O-state: 000000000
+Game Status: 011 X-state: 111111111 O-state: 010000000
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X: 111111111
+O: 010000000
+Game Status: 011
+0
+Stopped at time : 66 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 57
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+X_pos | AIMove 000010000
+X_pos | AIMove 00000000000000000000001000010000
+Game Status: 011 X-state: 111111111 O-state: 000000000
+Game Status: 011 X-state: 111111111 O-state: 010000000
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X: 111111111
+O: 010000000
+Game Status: 011
+0
+Stopped at time : 66 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 58
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+X_pos | AIMove 000010000
+X_pos | AIMove 100010000
+Game Status: 011 X-state: 111111111 O-state: 000000000
+Game Status: 011 X-state: 111111111 O-state: 010000000
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X: 111111111
+O: 010000000
+Game Status: 011
+0
+Stopped at time : 66 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 65
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Game Status: 011 X-state: 111111111 O-state: 000000000
+Game Status: 011 X-state: 111111111 O-state: 010000000
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X_pos | AIMove 111111111
+X: 111111111
+O: 010000000
+Game Status: 011
+0
+Stopped at time : 66 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 56
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Game Status: 011 X-state: 111111111 O-state: 000000000
+Game Status: 011 X-state: 111111111 O-state: 010000000
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X_pos | AIMove 111111111
+X: 111111111
+O: 010000000
+Game Status: 011
+0
+Stopped at time : 66 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 56
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 35
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 151
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 27
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 28
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 29
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 28
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 39
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 40
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 173
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 38
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 27
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 28
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 29
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 27
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 28
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 29
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 27
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 28
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 29
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 28
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 28
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 28
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 39
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 40
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 173
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 38
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 39
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 40
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 173
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 38
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 39
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 40
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 173
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 38
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 176
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 69
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/AI.v" Line 70
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 176
+# step
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Lookup.v" Line 176
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Game Status: 011 X-state: 111111111 O-state: 000000000
+Game Status: 011 X-state: 111111111 O-state: 010000000
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X_pos | AIMove 111111111
+X: 111111111
+O: 010000000
+Game Status: 011
+0
+Stopped at time : 66 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 56
+# run all
+Stopped at time : 19801745 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 59
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Game Status: 000 X-state: 000010000 O-state: 000000000
+Game Status: 000 X-state: 000010000 O-state: 010000000
+B
+B
+B
+B
+X
+B
+B
+O
+B
+X_pos | AIMove 000010001
+X: 000010000
+O: 010000000
+Game Status: 000
+0
+Stopped at time : 66 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 56
+# run all
+Stopped at time : 26987740 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 59
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 99
+# run all
+Game Status: 000 X-state: 100000000 O-state: 000000000
+Game Status: 000 X-state: 100000000 O-state: 010000000
+B
+B
+B
+B
+B
+B
+B
+O
+X
+X_pos | AIMove 100010000
+X: 100000000
+O: 010000000
+Game Status: 000
+0
+Stopped at time : 66 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 56
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+ISim P.68d (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 95
+# run all
+Stopped at time : 1 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 99
+# run all
+Game Status: 000 X-state: 100000000 O-state: 000000000
+Game Status: 000 X-state: 100000000 O-state: 010000000
+B
+B
+B
+B
+B
+B
+B
+O
+X
+X_pos | AIMove 100010000
+X: 100000000
+O: 010000000
+Game Status: 000
+0
+Stopped at time : 66 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState_tb.v" Line 58
+# run all
+Stopped at time : 25269305 ns : File "C:/Users/152/Desktop/CS152A-Lab4-TicTacToe/Game/GameState.v" Line 146
