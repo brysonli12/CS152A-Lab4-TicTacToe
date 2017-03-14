@@ -11,8 +11,8 @@ module LookupTableAI (
                       {O_state[6], O_state[3], O_state[0], O_state[7], O_state[4], O_state[1], O_state[8], O_state[5], O_state[2]}, rotation2);
     LookupTable rot3 ({X_state[2], X_state[5], X_state[8], X_state[1], X_state[4], X_state[7], X_state[0], X_state[3], X_state[6]}, 
                       {O_state[2], O_state[5], O_state[8], O_state[1], O_state[4], O_state[7], O_state[0], O_state[3], O_state[6]}, rotation3);
-    LookupTable rot4 ({X_state[8], X_state[7], X_state[6], X_state[5], X_state[4], X_state[3], X_state[2], X_state[1], X_state[0]}, 
-                      {O_state[8], O_state[7], O_state[6], O_state[5], O_state[4], O_state[3], O_state[2], O_state[1], O_state[0]}, rotation4);
+    LookupTable rot4 ({X_state[0], X_state[1], X_state[2], X_state[3], X_state[4], X_state[5], X_state[6], X_state[7], X_state[8]}, 
+                      {O_state[0], O_state[1], O_state[2], O_state[3], O_state[4], O_state[5], O_state[6], O_state[7], O_state[8]}, rotation4);
 
     Empty emptyx (~(X_state | O_state), empty); 
 
