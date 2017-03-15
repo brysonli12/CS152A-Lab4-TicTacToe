@@ -31,13 +31,16 @@ module Game(
 	output wire [2:0] green,//green vga output - 3 bits
 	output wire [1:0] blue,	//blue vga output - 2 bits
 	output wire hsync,		//horizontal sync out
-	output wire vsync			//vertical sync out
+	output wire vsync,			//vertical sync out
+	output wire [7:0] seg,
+	output wire [3:0] an
 	);
 
 // VGA display clock interconnect
 wire pix_en;
 wire logic_en;//logic clock interconnect
 wire logic_en_delay;//logic clock interconnect
+wire display_en;
 
 reg rst_vga;
 reg rst_ff;
@@ -57,7 +60,8 @@ clockdiv U1(
 	.rst(rst_vga),
 	.logic_en(logic_en),
 	.logic_en_1(logic_en_delay),
-	.pix_en(pix_en)
+	.pix_en(pix_en),
+	.display_en(display_en)
 	);
 /* DEBOUCNING INPUT */
 
@@ -159,6 +163,8 @@ LookupTableAI hard_ai(
 	.O_state(O_state),
 	.AIMove(AIMove_hard)
 	);
+	
+	wire [7:0] numWins;
 
 GameState state(
 	.rst(rst),
@@ -174,7 +180,8 @@ GameState state(
 //	.player(player),
 	.X_state(X_state),
 	.O_state(O_state),
-	.GameStatus(GameStatus)
+	.GameStatus(GameStatus),
+	.numWins(numWins)
 	);
 
 
@@ -192,5 +199,14 @@ vga640x480 U3(
 	.green(green),
 	.blue(blue)
 	);
+	
+	Display d(
+		.Value(numWins),
+		.clk(display_en),
+		.seg(seg),
+		.an(an)
+	);
+
+// Display Module
 
 endmodule

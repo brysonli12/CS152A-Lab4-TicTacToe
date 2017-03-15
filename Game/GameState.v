@@ -12,7 +12,8 @@ module GameState (
 //	output wire player, // 1 for X, 0 for O
 	output wire [8:0] X_state,
 	output wire [8:0] O_state,
-	output wire [2:0] GameStatus 
+	output wire [2:0] GameStatus,
+	output wire [7:0] numWins
 	// 0 (000) AI move
 	// 7 (111) Player Move
 	// 1 (01) means that X has won
@@ -27,6 +28,7 @@ module GameState (
 	reg [8:0] O_pos;
 	reg [8:0] tmp_O_pos = 9'b000000000;
 	reg [2:0] game_stats = 0;
+	reg [7:0] tmp_Score = 0;
 	reg player;
 	reg tmp_player;
 		
@@ -158,13 +160,14 @@ module GameState (
 				if(O_pos == 9'b000_000_111 || O_pos == 9'b000_111_000 || O_pos == 9'b111_000_000 || // horizontal
 					O_pos == 9'b100_100_100 || O_pos == 9'b010_010_010 || O_pos == 9'b001_001_001 || //vertical
 					O_pos == 9'b100_010_001 || O_pos == 9'b001_010_100) //diagonal
+				begin
+						tmp_Score <= tmp_Score + 1;
 						game_stats <= 2;
+				end
 				else if((O_pos | X_pos) == 9'b111_111_111)
 						game_stats <= 3;
 			end
 			else  begin // AI moved
-				// CHECK WIN for X
-				game_stats <= 0;
 			
 							
 				// Check if X won
@@ -172,7 +175,10 @@ module GameState (
 				if(X_pos == 9'b000_000_111 || X_pos == 9'b000_111_000 || X_pos == 9'b111_000_000 || // horizontal
 					X_pos == 9'b100_100_100 || X_pos == 9'b010_010_010 || X_pos == 9'b001_001_001 || //vertical
 					X_pos == 9'b100_010_001 || X_pos == 9'b001_010_100) //diagonal
+				begin
+					tmp_Score <= tmp_Score + 1;
 					game_stats <= 1;
+				end
 				else if((O_pos | X_pos) == 9'b111_111_111)
 					game_stats <= 3;
 			end
@@ -182,7 +188,7 @@ module GameState (
 	assign GameStatus = game_stats; 
 	assign X_state = X_pos;
 	assign O_state = O_pos;
-
+	assign numWins = tmp_Score;
 
 
 endmodule

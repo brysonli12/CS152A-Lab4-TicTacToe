@@ -23,7 +23,8 @@ module clockdiv(
 	input wire rst,		//asynchronous reset
 	output wire logic_en, // logic clock: 3051.75 Hz
 	output wire logic_en_1, // logic clock delayed by one cycle
-	output wire pix_en//,		//pixel clock: 25MHz
+	output wire pix_en,		//pixel clock: 25MHz
+	output wire display_en // Display clock: 700 Hz
 	//output wire seg_en	//7-segment clock: 381.47Hz
 	);
 
@@ -50,6 +51,8 @@ end
 // 100Mhz ÷ 2^15 = 3051.75Hz
 assign logic_en = q[15] & ~q[14] & ~q[13] & ~q[12] & ~q[11] & ~q[10] & ~q[9] & ~q[8] & ~q[7] & ~q[6] & ~q[5] & ~q[4] & ~q[3]& ~q[2] & ~q[1]& ~q[0];
 assign logic_en_1 = q[15] & ~q[14] & ~q[13] & ~q[12] & ~q[11] & ~q[10] & ~q[9] & ~q[8] & ~q[7] & ~q[6] & ~q[5] & ~q[4] & ~q[3]& ~q[2] & ~q[1]& q[0];
+
+assign display_en = q[14] & ~q[13] & ~q[12] & ~q[11] & ~q[10] & ~q[9] & ~q[8] & ~q[7] & ~q[6] & ~q[5] & ~q[4] & ~q[3]& ~q[2] & ~q[1]& ~q[0];
 // 100Mhz ÷ 2^2 = 25MHz
 //assign pix_en = q[1];
 assign pix_en = ~q[1] & ~q[0];
