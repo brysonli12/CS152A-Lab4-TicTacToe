@@ -62,7 +62,7 @@ module TwoInGrid(
 endmodule
 
 // Arbitriter, selecting the most significant bit. 
-module RARb #(parameter [50:0] n = 'd49)
+module RARb #(parameter n = 8)
 	(r, g);
     input [n - 1 : 0] r;
     output [n - 1 : 0] g;
