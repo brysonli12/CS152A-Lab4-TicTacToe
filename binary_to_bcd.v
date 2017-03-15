@@ -1,4 +1,6 @@
 `timescale 1ns / 1ps
+///// NOTICE: this module is taken from http://people.ee.duke.edu/~dwyer/courses/ece52/Binary_to_BCD_Converter.pdf
+// it is only used for a part of the score display (not used for major logic part of our project/ game)
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
