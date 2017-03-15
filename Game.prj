@@ -1,8 +1,0 @@
-verilog work "AI.v"
-verilog work "VGA/vga640x480.v"
-verilog work "VGA/clockdiv.v"
-verilog work "Synchronizer.v"
-verilog work "Lookup.v"
-verilog work "Game/GameState.v"
-verilog work "Debouncer.v"
-verilog work "Game.v"

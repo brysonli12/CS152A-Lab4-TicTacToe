@@ -2,14 +2,14 @@ Command line:
    GameState_TB_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  52478
+     -socket  54424
 
-Tue Mar 14 11:15:37 2017
+Tue Mar 14 18:19:17 2017
 
 
- Elaboration Time: 0.0624 sec
+ Elaboration Time: 0.03125 sec
 
- Current Memory Usage: 828.359 Meg
+ Current Memory Usage: 841.63 Meg
 
  Total Signals          : 148
  Total Nets             : 600
@@ -17,12 +17,13 @@ Tue Mar 14 11:15:37 2017
  Total Blocks           : 35
  Total Primitive Blocks : 26
  Total Processes        : 118
- Total Traceable Variables  : 37
- Total Scalar Nets and Variables : 1014
+ Total Traceable Variables  : 40
+ Total Scalar Nets and Variables : 1033
+Total Line Count : 687
 
- Total Simulation Time: 3.97803 sec
+ Total Simulation Time: 0.125 sec
 
- Current Memory Usage: 671.072 Meg
+ Current Memory Usage: 684.343 Meg
 
-Tue Mar 14 11:47:04 2017
+Tue Mar 14 18:21:18 2017
 

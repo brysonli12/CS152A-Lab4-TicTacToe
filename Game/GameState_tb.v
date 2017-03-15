@@ -20,35 +20,118 @@ module GameState_TB;
 	initial begin
 		clk = 0;
 		rst = 1;
-		AISwitch =1 ;
-		#1 rst = 0;
-		move =0;//make move
-		//player =0;//O
-		nextMove = 0; // top left
-		#20
-		$display("Game Status: %b X-state: %b O-state: %b", status, X_state, O_state);
-		#20
-		move = 1;//make move
-		//player =1;//O
-		nextMove = 1; // top left
-		#5
+		AISwitch =0 ;
 		move = 0;
-		$display("Game Status: %b X-state: %b O-state: %b", status, X_state, O_state);
-		#20
-		move = 1;
+		#1 rst = 0;
 		i = 0; j = 0;
 		while(i < 9 && j < 9)
 		begin
 			if(X_state[i] == 1)
-				$display("X");
+				$write("X");
 			else if(O_state[i] == 1)
-				$display("O");
+				$write("O");
 			else
-				$display("B");
-			if(i +1 %3 == 0) $display("\n");
+				$write("B");
+			if((i +1) %3 == 0 && i != 0) $write("\n");
 			i = i+1; j=j+1;
 		end
-		$display("X_pos | AIMove %b", X_state | AIMove);
+		$write("\n\n\n");
+		
+		
+		move =1;//make move
+		//player =0;//O
+		nextMove = 1; // top left
+		#20
+		//$display("Game Status: %b X-state: %b O-state: %b", status, X_state, O_state);
+		i = 0; j = 0;		while(i < 9 && j < 9)
+		begin
+			if(X_state[i] == 1)
+				$write("X");
+			else if(O_state[i] == 1)
+				$write("O");
+			else
+				$write("B");
+			if((i +1) %3 == 0 && i != 0) $write("\n");
+			i = i+1; j=j+1;
+		end
+		$write("\n\n\n");
+		
+		
+		move = 0;
+		#20
+		move = 1;//make move
+		//player =1;//O
+		nextMove = 2; // top left
+		
+		
+		#5
+		i = 0; j = 0;
+				while(i < 9 && j < 9)
+		begin
+			if(X_state[i] == 1)
+				$write("X");
+			else if(O_state[i] == 1)
+				$write("O");
+			else
+				$write("B");
+			if((i +1) %3 == 0 && i != 0) $write("\n");
+			i = i+1; j=j+1;
+		end
+		$write("\n\n\n");
+		
+		
+		move = 0;
+		//$display("Game Status: %b X-state: %b O-state: %b", status, X_state, O_state);
+		#20
+		move = 1;
+		nextMove = 3;
+		i = 0; j = 0;
+		
+				while(i < 9 && j < 9)
+		begin
+			if(X_state[i] == 1)
+				$write("X");
+			else if(O_state[i] == 1)
+				$write("O");
+			else
+				$write("B");
+			if((i +1) %3 == 0 && i != 0) $write("\n");
+			i = i+1; j=j+1;
+		end
+		$write("\n\n\n");
+		
+		#5
+				i = 0; j = 0;
+		
+				while(i < 9 && j < 9)
+		begin
+			if(X_state[i] == 1)
+				$write("X");
+			else if(O_state[i] == 1)
+				$write("O");
+			else
+				$write("B");
+			if((i +1) %3 == 0 && i != 0) $write("\n");
+			i = i+1; j=j+1;
+		end
+		$write("\n\n\n");
+		
+		move = 0;
+		#20
+		i = 0; j = 0;
+		while(i < 9 && j < 9)
+		begin
+			if(X_state[i] == 1)
+				$write("X");
+			else if(O_state[i] == 1)
+				$write("O");
+			else
+				$write("B");
+			if((i +1) %3 == 0 && i != 0) $write("\n");
+			i = i+1; j=j+1;
+		end
+		$write("\n");
+		$display("X_pos | AIMove %b", AIMove);
 		$display("X: %b", X_state);
 		$display("O: %b", O_state);
 		$display("Game Status: %b", status);

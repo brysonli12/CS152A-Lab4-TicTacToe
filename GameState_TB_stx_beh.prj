@@ -1,5 +1,0 @@
-verilog isim_temp "AI.v"
-verilog isim_temp "Lookup.v"
-verilog isim_temp "Game/GameState.v"
-verilog isim_temp "Game/GameState_tb.v"
-verilog isim_temp "C:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v"
