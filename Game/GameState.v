@@ -24,13 +24,13 @@ module GameState (
 	);
 
 	reg [8:0] X_pos;
-	reg [8:0] tmp_X_pos;
+	reg [8:0] tmp_X_pos = 9'b000000000;
 	reg [8:0] O_pos;
 	reg [8:0] tmp_O_pos = 9'b000000000;
 	reg [2:0] game_stats = 0;
 	reg [7:0] tmp_Score = 0;
 	reg player;
-	reg tmp_player;
+	reg tmp_player = 1;
 		
 	// MAKE A MOVE
 	// Tile Blocks
@@ -47,63 +47,63 @@ module GameState (
 			begin
 				case(nextMove)
 					0: // tile 0, O
-						if(X_pos[8] | O_pos[8] != 1) // if no move made yet
+						if(((X_pos[8] | O_pos[8]) != 1) && tmp_X_pos[8] != 1) // if no move made yet
 						begin
 							tmp_O_pos = O_pos | 9'b100000000;
 							tmp_player = ~player;
 						end
 
 					1: // tile 1, O
-						if(X_pos[7] | O_pos[7] != 1) // if no move made yet
+						if(((X_pos[7] | O_pos[7]) != 1) && (tmp_X_pos[7] != 1)) // if no move made yet
 						begin
 							tmp_O_pos = O_pos | 9'b010000000;
 							tmp_player = ~player;
 						end
 
 					2: // tile 2, O
-						if(X_pos[6] | O_pos[6] != 1) // if no move made yet
+						if(((X_pos[6] | O_pos[6]) != 1) && (tmp_X_pos[6] != 1)) // if no move made yet
 						begin
 							tmp_O_pos = O_pos | 9'b001000000;
 							tmp_player = ~player;
 						end
 
 					3: // tile 3, O
-						if(X_pos[5] | O_pos[5] != 1) // if no move made yet
+						if(((X_pos[5] | O_pos[5]) != 1) && (tmp_X_pos[5] != 1))
 						begin
 							tmp_O_pos = O_pos | 9'b000100000;
 							tmp_player = ~player;
 						end
 
 					4: // tile 4, O
-						if(X_pos[4] | O_pos[4] != 1) // if no move made yet
+						if(((X_pos[4] | O_pos[4]) != 1) && (tmp_X_pos[4] != 1))
 						begin
 							tmp_O_pos = O_pos | 9'b000010000;
 							tmp_player = ~player;
 						end
 
 					5: // tile 5, O
-						if(X_pos[3] | O_pos[3] != 1) // if no move made yet
+						if(((X_pos[3] | O_pos[3]) != 1) && (tmp_X_pos[3] != 1))
 						begin
 							tmp_O_pos = O_pos | 9'b000001000;
 							tmp_player = ~player;
 						end
 
 					6: // tile 6, O
-						if(X_pos[2] | O_pos[2] != 1) // if no move made yet
+						if(((X_pos[2] | O_pos[2]) != 1) && (tmp_X_pos[2] != 1))
 						begin
 							tmp_O_pos = O_pos | 9'b000000100;
 							tmp_player = ~player;
 						end
 
 					7: // tile 7, O
-						if(X_pos[1] | O_pos[1] != 1) // if no move made yet
+						if(((X_pos[1] | O_pos[1]) != 1) && (tmp_X_pos[1] != 1))
 						begin
 							tmp_O_pos = O_pos | 9'b000000010;
 							tmp_player = ~player;
 						end
 
 					8: // tile 8, O
-						if(X_pos[0] | O_pos[0] != 1) // if no move made yet
+						if(((X_pos[0] | O_pos[0]) != 1) && (tmp_X_pos[0] != 1))
 						begin
 							tmp_O_pos = O_pos | 9'b000000001;
 							tmp_player = ~player;
@@ -117,7 +117,7 @@ module GameState (
 			end
 			
 		end
-		else if(player == 1 && move == 0 ) // X move
+		else if(player == 1 && move == 0 && tmp_player == 1) // X move
 			begin // easy if AI Switch is false, else, use hard move
 				if(AISwitch == 1'b0) begin
 					tmp_X_pos = X_pos | AIMove;
@@ -157,9 +157,9 @@ module GameState (
 				
 				// Check if O won.  
 				// If not, and xoring two positions together creates 111111111, then there is draw
-				if(O_pos == 9'b000_000_111 || O_pos == 9'b000_111_000 || O_pos == 9'b111_000_000 || // horizontal
+				if(game_stats == 0 && (O_pos == 9'b000_000_111 || O_pos == 9'b000_111_000 || O_pos == 9'b111_000_000 || // horizontal
 					O_pos == 9'b100_100_100 || O_pos == 9'b010_010_010 || O_pos == 9'b001_001_001 || //vertical
-					O_pos == 9'b100_010_001 || O_pos == 9'b001_010_100) //diagonal
+					O_pos == 9'b100_010_001 || O_pos == 9'b001_010_100)) //diagonal
 				begin
 						tmp_Score <= tmp_Score + 1;
 						game_stats <= 2;
@@ -172,9 +172,9 @@ module GameState (
 							
 				// Check if X won
 				// If not, and xoring two positions together creates 111111111, then there is draw
-				if(X_pos == 9'b000_000_111 || X_pos == 9'b000_111_000 || X_pos == 9'b111_000_000 || // horizontal
+				if(game_stats == 0 && (X_pos == 9'b000_000_111 || X_pos == 9'b000_111_000 || X_pos == 9'b111_000_000 || // horizontal
 					X_pos == 9'b100_100_100 || X_pos == 9'b010_010_010 || X_pos == 9'b001_001_001 || //vertical
-					X_pos == 9'b100_010_001 || X_pos == 9'b001_010_100) //diagonal
+					X_pos == 9'b100_010_001 || X_pos == 9'b001_010_100)) //diagonal
 				begin
 					tmp_Score <= tmp_Score + 1;
 					game_stats <= 1;
