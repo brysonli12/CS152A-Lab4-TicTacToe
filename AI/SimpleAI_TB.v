@@ -55,8 +55,8 @@ module SimpleAI_TB;
 		#5;
 		$display("X-state: %b O-state: %b Predicted Move: %b", X_state, O_state, AI_move);
 		*/
-		X_state = 9'b110000000;
-		O_state = 9'b000000011;
+		X_state = 9'b00010000;
+		O_state = 9'b01000000;
 		#5;
 		$display("X-state: %b O-state: %b Predicted Move: %b", X_state, O_state, AI_move);
 		

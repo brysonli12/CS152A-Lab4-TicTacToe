@@ -15,13 +15,13 @@
          <ClosedNode>/SimpleAI_TB C:|Users|Isaac|Documents|GitHub|CS152A-Lab4-TicTacToe|SimpleAI_TB.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Game (C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game.v)</SelectedItem>
+         <SelectedItem>GameState (C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game/GameState.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000015a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000015a0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000da000000020000000000000000000000000200000064ffffffff000000810000000300000002000000da0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Game (C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game.v)</CurrentItem>
+      <CurrentItem>GameState (C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/Game/GameState.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -74,13 +74,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Synthesize - XST</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000132000000010000000100000000000000000000000064ffffffff000000810000000000000001000001320000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Synthesize - XST</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
       <ClosedNodes>
@@ -97,29 +97,32 @@
       <CurrentItem/>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000000c4000000ca01000000050100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CurrentView>Behavioral Simulation</CurrentView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/Game C:|Users|152|Desktop|CS152A-Lab4-TicTacToe|Game.v</ClosedNode>
          <ClosedNode>/Game C:|Users|Isaac|Documents|GitHub|CS152A-Lab4-TicTacToe|Game.v</ClosedNode>
+         <ClosedNode>/Game C:|Users|Isaac|Documents|GitHub|CS152A-Lab4-TicTacToe|Game|Game.v</ClosedNode>
          <ClosedNode>/GameState_TB C:|Users|152|Desktop|CS152A-Lab4-TicTacToe|Game|GameState_tb.v</ClosedNode>
+         <ClosedNode>/GameState_TB C:|Users|Isaac|Documents|GitHub|CS152A-Lab4-TicTacToe|Game|GameState_tb.v</ClosedNode>
+         <ClosedNode>/Game_TB C:|Users|Isaac|Documents|GitHub|CS152A-Lab4-TicTacToe|Game_TB.v</ClosedNode>
          <ClosedNode>/Game_TB C:|Users|User|Documents|GitHub|CS152A-Lab4-TicTacToe|Game_TB.v/gam - Game/sa - SimpleAI</ClosedNode>
+         <ClosedNode>/Select2 C:|Users|Isaac|Documents|GitHub|CS152A-Lab4-TicTacToe|AI.v</ClosedNode>
          <ClosedNode>/SimpleAI C:|Users|152|Desktop|CS152A-Lab4-TicTacToe|AI.v</ClosedNode>
          <ClosedNode>/SimpleAI C:|Users|152|Desktop|CS152A-Lab4-TicTacToe|AI.v/blockO - TwoInGrid</ClosedNode>
          <ClosedNode>/SimpleAI C:|Users|152|Desktop|CS152A-Lab4-TicTacToe|AI.v/emptyx - Empty</ClosedNode>
          <ClosedNode>/SimpleAI C:|Users|152|Desktop|CS152A-Lab4-TicTacToe|AI.v/pick - Select3</ClosedNode>
          <ClosedNode>/SimpleAI C:|Users|152|Desktop|CS152A-Lab4-TicTacToe|AI.v/winX - TwoInGrid</ClosedNode>
-         <ClosedNode>/SimpleAI_TB C:|Users|Isaac|Documents|GitHub|CS152A-Lab4-TicTacToe|SimpleAI_TB.v</ClosedNode>
+         <ClosedNode>/SimpleAI_TB C:|Users|Isaac|Documents|GitHub|CS152A-Lab4-TicTacToe|AI|SimpleAI_TB.v</ClosedNode>
+         <ClosedNode>/SimpleAI_TB C:|Users|Isaac|Documents|GitHub|CS152A-Lab4-TicTacToe|SimpleAI_TB.v/sa - SimpleAI</ClosedNode>
       </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>Game_TB (C:/Users/User/Documents/GitHub/CS152A-Lab4-TicTacToe/Game_TB.v)</SelectedItem>
-      </SelectedItems>
+      <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000016f000000020000000000000000000000000200000064ffffffff0000008100000003000000020000016f0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000ed000000020000000000000000000000000200000064ffffffff000000810000000300000002000000ed0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Game_TB (C:/Users/User/Documents/GitHub/CS152A-Lab4-TicTacToe/Game_TB.v)</CurrentItem>
+      <CurrentItem>SimpleAI_TB (C:/Users/Isaac/Documents/GitHub/CS152A-Lab4-TicTacToe/AI/SimpleAI_TB.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -131,7 +134,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000143000000010000000100000000000000000000000064ffffffff000000810000000000000001000001430000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Update All Schematic Files</CurrentItem>
    </ItemView>
@@ -140,12 +143,12 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Behavioral Check Syntax</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e70000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000143000000010000000100000000000000000000000064ffffffff000000810000000000000001000001430000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Behavioral Check Syntax</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
 </Project>

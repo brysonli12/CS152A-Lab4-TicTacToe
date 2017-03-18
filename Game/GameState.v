@@ -24,13 +24,13 @@ module GameState (
 	);
 
 	reg [8:0] X_pos;
-	reg [8:0] tmp_X_pos = 9'b000000000;
+	reg [8:0] tmp_X_pos;
 	reg [8:0] O_pos;
 	reg [8:0] tmp_O_pos = 9'b000000000;
 	reg [2:0] game_stats = 0;
 	reg [7:0] tmp_Score = 0;
 	reg player;
-	reg tmp_player = 1;
+	reg tmp_player;
 		
 	// MAKE A MOVE
 	// Tile Blocks

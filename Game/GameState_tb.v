@@ -12,6 +12,7 @@ module GameState_TB;
 	wire [8:0] O_state;
 	wire [8:0] AIMove;
 	wire [8:0] AIMove_hard;
+	wire [7:0] numWins;
 	wire [2:0] status;
 	reg AISwitch;
 	
@@ -20,7 +21,7 @@ module GameState_TB;
 	initial begin
 		clk = 0;
 		rst = 1;
-		AISwitch =1 ;
+		AISwitch =0 ;
 		move = 0;
 		#1 rst = 0;
 		i = 0; j = 0;
@@ -116,7 +117,7 @@ module GameState_TB;
 		end
 		$write("\n\n\n");
 		
-		//move = 0;
+		move = 0;
 		#20
 		i = 0; j = 0;
 		while(i < 9 && j < 9)
@@ -165,7 +166,7 @@ GameState state(
 	.AIMove(AIMove),
 	.AIMove_Hard(AIMove_hard),
 	
-	
+	.numWins(numWins),
 //	.player(player),
 	.X_state(X_state),
 	.O_state(O_state),
