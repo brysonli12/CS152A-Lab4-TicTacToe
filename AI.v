@@ -74,8 +74,8 @@ module Empty(
     input [8:0] in,
     output [8:0] out);
 
-    RARb #(9) ra({in[7],in[0],in[2],in[6],in[8],in[1],in[3],in[5],in[4]},
-        {out[7],out[0],out[2],out[6],out[8],out[1],out[3],out[5],out[4]}) ;
+    RARb #(9) ra({in[4],in[0],in[2],in[6],in[8],in[1],in[3],in[5],in[7]},
+        {out[4],out[0],out[2],out[6],out[8],out[1],out[3],out[5],out[7]}) ;
 endmodule
 
 
